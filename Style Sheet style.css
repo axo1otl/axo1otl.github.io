@@ -1,0 +1,25 @@
+html{
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    margin: 0px;
+    background-color:#121516;
+}
+
+h2{
+    padding: 20px;
+    background-color: #121516;
+    border: 10px solid #121516;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0px 0px 30px #454d5344;
+}
+
+h1{
+    font-weight: 200;
+    margin: 30px;
+    color: #1b1f21;
+}
+list{
+    font-size: large;
+}
