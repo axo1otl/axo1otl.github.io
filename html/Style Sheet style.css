@@ -8,10 +8,10 @@ body{
 }
 
 h2{
-    background-color: #1b1f21;
-    color: #85939e;
     padding: 20px;
-    border-bottom-left-radius: 20px;
+    background-color: #1b1f21;
+    border: 10px solid #1b1f21;
+    border-bottom-left-radius: 40px;
 }
 
 h1{
@@ -19,7 +19,6 @@ h1{
     margin: 30px;
     color: #1b1f21;
 }
-
 list{
     font-size: large;
 }
