@@ -7,14 +7,18 @@ body{
     background-color:#121516;
 }
 
-h2{
-    background-color: #1b1f21;
+h1{
+    background-color: #2f3539;
     color: #85939e;
+
+    font-weight: 200;
+
     padding: 20px;
     border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 50px #2f353950;
 }
 
-h1{
+h2{
     font-weight: 200;
     margin: 30px;
     color: #1b1f21;
@@ -22,4 +26,14 @@ h1{
 
 list{
     font-size: large;
+}
+
+colors{
+    color: #fff
+    #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
+    #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
+    # # # # # #
+    # # # # # #
+    # # # # # #
+    # # # # # #
 }
