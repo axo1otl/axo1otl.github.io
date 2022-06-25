@@ -1,0 +1,16 @@
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color:#121516;
+}
+
+h1{
+    color: #1b1f21;
+}
+
+h2{
+    background-color: #1b1f21;
+    border: 10px solid #1b1f21;
+}
