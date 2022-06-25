@@ -1,6 +1,5 @@
 html{
     font-family: 'DM Sans', sans-serif;
-    font-size: 2vh;
 }
 
 body{
@@ -12,7 +11,7 @@ h1{
     margin: auto;
     color: #85939e;
     text-align: center;
-    font-size: 100;
+    image-rendering: crisp-edges;
 }
 
 h2{
