@@ -101,6 +101,7 @@ li.dropdown{
     transition: all .5s ease;
     margin: 0px;
 } 
+/*
 .dropdown-content a:hover{
     margin: 10px;
     transition: all .5s ease;
@@ -109,7 +110,6 @@ li.dropdown{
     padding-right: 40px;
     color: #564064;
 }
-/*
 .dropdown-content b{
     color: #fff4;
     text-decoration: none;
