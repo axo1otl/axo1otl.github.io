@@ -150,13 +150,13 @@ h3{
     margin: 5px;
 }
 .bar_yt{
-    background-color: #ff8933;
+    background-color: #ad2f45;
     color: #0000;
     border-radius: 10000px;
     margin: 5px;
 }
 .update_content{
-    margin: 5px;
+    margin-top: 10px;
     background-color: #454d5340;
     border-radius: 20px;
 }
@@ -164,6 +164,18 @@ h3{
     display: flex;
     margin: 0px;
     padding-left: 10px;
+    background-color: #454d5340;
+    border-radius: 20px;
+}
+.description{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #454d5340;
+    border-radius: 20px;
+}
+.content{
+    margin-top: 10px;
+    padding: 10px;
     background-color: #454d5340;
     border-radius: 20px;
 }
