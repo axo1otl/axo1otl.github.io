@@ -5,6 +5,7 @@ html{
 body{
     margin: 0px;
     background-color:#1b1f21;
+    background-image: url("images/mc screenshot.png");
 }
 
 h1{
@@ -60,6 +61,7 @@ ul{
     font-size: 50%;
     transition: all 1s ease;
     width: fit-content;
+
 }
 ul:hover{
     padding-right: 0px;
@@ -139,7 +141,9 @@ h3{
     margin: 10px;
     padding: 10px;
 
-    background-color: #2f3539;
+    background-color: #2f353990;
+    backdrop-filter: blur(15px);
+
     color: #85939e;
     font-weight: 200;
     border-radius: 20px;
@@ -147,6 +151,7 @@ h3{
     
     width: auto;
     font-size: 100%;
+    z-index: -1;
 }
 .bar_ng{
     background-color: #ff8819;
@@ -162,28 +167,28 @@ h3{
 }
 .update_content{
     margin-top: 10px;
-    background-color: #454d5340;
+    background-color: #85939e30;
     border-radius: 20px;
 }
 .ttd{
     display: flex;
     margin: 0px;
     padding-left: 10px;
-    background-color: #454d5340;
+    background-color: #2f3539;
     border-radius: 20px;
 }
 .description{
     margin-top: 10px;
     padding: 10px;
-    background-color: #454d5340;
+    background-color: #2f3539;
     border-radius: 20px;
 }
 .content{
     display: flex;
     align-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 10px;
-    background-color: #454d5340;
+    background-color: #2f3539;
     border-radius: 20px;
 }
 /*updates end*/
