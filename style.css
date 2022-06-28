@@ -16,6 +16,7 @@ h1{
     padding: 10px;
     border-bottom-left-radius: 20px;
     box-shadow: 0px 0px 25px #12151650;
+    margin: 0px;
 }
 .logo{
     margin-top: -7px;
@@ -34,7 +35,7 @@ h2{
     text-align: center;
     width: auto;
     font-size: 200%;
-
+    padding-top: 10px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -143,13 +144,13 @@ h3{
     font-size: 100%;
 }
 .bar_ng{
-    background-color: #ff8933;
+    background-color: #ff8819;
     color: #0000;
     border-radius: 10000px;
     margin: 5px;
 }
 .bar_yt{
-    background-color: #ad2f45;
+    background-color: #da313f;
     color: #0000;
     border-radius: 10000px;
     margin: 5px;
@@ -173,6 +174,8 @@ h3{
     border-radius: 20px;
 }
 .content{
+    display: flex;
+    align-content: center;
     margin-top: 10px;
     padding: 10px;
     background-color: #454d5340;
@@ -189,4 +192,6 @@ colors{
     #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
     #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
     #4f1d4c #781d4f #ad2f45 #e64539 #ff8933 #ffc2a1
+
+    #da313f #ff8819
 }
