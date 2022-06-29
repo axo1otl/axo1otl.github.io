@@ -28,7 +28,7 @@ h1{
 h2{
     margin: 0px;
     background-color: #0000;
-    color: #85939e;
+    color: #cad4db;
     font-weight: 200;
     border-radius: 100px;
     box-shadow: 0px 0px 20px #12151630;
@@ -53,7 +53,7 @@ ul{
     background-color: #85939e40;
     backdrop-filter: blur(5px);
 
-    color: #85939e;
+    color: #cad4db;
     font-weight: 200;
     border-radius: 100px;
     box-shadow: 0px 0px 20px #12151630;
@@ -72,7 +72,7 @@ li{
 }
 li a, .dropbtn{
     display: block;
-    color: white;
+    color: #cad4db;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -141,10 +141,10 @@ h3{
     margin: 10px;
     padding: 10px;
 
-    background-color: #2f353990;
+    background-color: #2f3539;
     backdrop-filter: blur(15px);
 
-    color: #85939e;
+    color: #cad4db;
     font-weight: 200;
     border-radius: 20px;
     box-shadow: 0px 0px 20px #12151630;
@@ -167,20 +167,20 @@ h3{
 }
 .update_content{
     margin-top: 10px;
-    background-color: #85939e30;
+    background-color: #454d5390;
     border-radius: 20px;
 }
 .ttd{
     display: flex;
     margin: 0px;
     padding-left: 10px;
-    background-color: #2f3539;
+    background-color: #454d53;
     border-radius: 20px;
 }
 .description{
     margin-top: 10px;
     padding: 10px;
-    background-color: #2f3539;
+    background-color: #454d53;
     border-radius: 20px;
 }
 .content{
@@ -188,7 +188,7 @@ h3{
     align-content: center;
     margin-top: 5px;
     padding: 10px;
-    background-color: #2f3539;
+    background-color: #454d53;
     border-radius: 20px;
 }
 /*updates end*/
@@ -203,13 +203,13 @@ h4{
     background-color: #2f3539c0;
     backdrop-filter: blur(5px);
 
-    color: #85939e;
+    color: #cad4db;
     font-weight: 200;
     border-radius: 20px;
     box-shadow: 0px 0px 20px #12151630;
     
     max-width: 500px;
-    
+
     font-size: 100%;
     z-index: -1;
 }
@@ -219,5 +219,5 @@ colors{
     #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
     #4f1d4c #781d4f #ad2f45 #e64539 #ff8933 #ffc2a1
 
-    #da313f #ff8819
+    #da313f #ff8819 #cad4db
 }
