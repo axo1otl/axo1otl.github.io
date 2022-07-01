@@ -13,6 +13,7 @@ body{
     background-image: url("images/mc screenshot.png");
 }
 
+/* Titile bar start */
 h1{
     background-color: #2f3539;
     color: #85939e;
@@ -24,11 +25,26 @@ h1{
     box-shadow: 0px 0px 25px #12151650;
     margin: 0px;
 }
+.home{
+    color: #ffaeb688;
+}
+.news{
+    color: #ffc2a188;
+}
+.art{
+    color: #92e8c088;
+}
+.status_bar{
+    font-size: 20px;
+    font-weight: 300;
+}
 .logo{
     margin-top: -7px;
     height: 50px;
     width: 76px;
 }
+/* Titile bar end */
+
 /**/
 h2{
     margin: 0px;
@@ -36,7 +52,6 @@ h2{
     color: #cad4db;
     font-weight: 200;
     border-radius: 100px;
-    box-shadow: 0px 0px 20px #12151630;
     
     text-align: center;
     width: auto;
@@ -70,6 +85,7 @@ ul{
 }
 ul:hover{
     padding-right: 0px;
+    background-color: #1b1f2140;
     transition: all 0.5s ease;
 }
 li{
@@ -223,6 +239,7 @@ colors{
     #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
     #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
     #4f1d4c #781d4f #ad2f45 #e64539 #ff8933 #ffc2a1
+    #2b2b44 #3a3f5f #4c6885 #4fa4b8 #92e8c0 #daf5df
 
     #da313f #ff8819 #cad4db
 }
