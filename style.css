@@ -11,6 +11,7 @@ body{
     margin: 0px;
     background-color:#1b1f21;
     background-image: url("images/mc screenshot.png");
+    background-repeat: no-repeat;
 }
 
 /* Titile bar start */
@@ -161,18 +162,16 @@ li.dropdown{
 h3{
     margin: 10px;
     padding: 10px;
+    width: fit-content;
+    z-index: -1;
 
     background-color: #2f3539;
-    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 20px #12151630;
+    border-radius: 25px;
 
     color: #cad4db;
     font-weight: 200;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px #12151630;
-    
-    width: auto;
     font-size: 100%;
-    z-index: -1;
 }
 .bar_ng{
     background-color: #ff8819;
@@ -188,7 +187,7 @@ h3{
 }
 .update_content{
     margin-top: 10px;
-    background-color: #454d5390;
+    background-color: #3b4248;
     border-radius: 20px;
 }
 .ttd{
@@ -197,20 +196,23 @@ h3{
     padding-left: 10px;
     background-color: #454d53;
     border-radius: 20px;
+    font-weight: bold;
 }
 .description{
     margin-top: 10px;
     padding: 10px;
-    background-color: #454d53;
     border-radius: 20px;
 }
 .content{
     display: flex;
     align-content: center;
-    margin-top: 5px;
-    padding: 10px;
-    background-color: #454d53;
-    border-radius: 20px;
+    padding-left: 10px;
+}
+.round{
+    /*
+    */
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 /*updates end*/
 
@@ -229,7 +231,7 @@ h4{
     border-radius: 20px;
     box-shadow: 0px 0px 20px #12151630;
     
-    max-width: 500px;
+    max-width: 1000px;
 
     font-size: 100%;
     z-index: -1;
