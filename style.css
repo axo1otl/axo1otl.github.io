@@ -10,8 +10,10 @@ html{
 body{
     margin: 0px;
     background-color:#1b1f21;
-    background-image: url("images/mc screenshot.png");
     background-repeat: no-repeat;
+}
+.mcBackground{
+    background-image: url("images/mc screenshot.png");
 }
 
 /* Titile bar start */
