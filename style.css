@@ -174,14 +174,14 @@ h3{
     font-size: 100%;
 }
 .bar_ng{
-    background-color: #ff8819;
-    color: #0000;
+    background-color: #0000;
+    color: #ff8819;
     border-radius: 10000px;
     margin: 5px;
 }
 .bar_yt{
-    background-color: #da313f;
-    color: #0000;
+    background-color: #0000;
+    color: #da313f;
     border-radius: 10000px;
     margin: 5px;
 }
