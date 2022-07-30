@@ -14,6 +14,15 @@ body{
 }
 .mcBackground{
     background-image: url("images/mc screenshot.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mcbgBlur{
+    background-image: url("images/mc screenshot.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Titile bar start */
@@ -306,6 +315,62 @@ h3{
     
     transition: all 0.5s ease;
 }
+
+.link_twt{
+    display: flex;
+    margin-left: 0px;
+    margin-bottom: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
+    background-color: #454d53;
+    color: #1d9bf0;
+    text-decoration: none;
+
+    border-radius: 20px;
+    font-weight: bold;
+
+    transition: all 0.5s ease;
+}
+.link_twt:hover{
+    
+    background-color: #1d9bf0;
+    color: #fff;
+    
+    transition: all 0.5s ease;
+}
+
+.link_ttv{
+    display: flex;
+    margin-left: 0px;
+    margin-bottom: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
+    background-color: #454d53;
+    color: #bb44ff;
+    text-decoration: none;
+
+    border-radius: 20px;
+    font-weight: bold;
+
+    transition: all 0.5s ease;
+}
+.link_ttv:hover{
+    
+    background-color: #aa00ff;
+    color: #fff;
+    
+    transition: all 0.5s ease;
+}
 /*updates end*/
 
 list{
@@ -339,7 +404,7 @@ colors{
     #4f1d4c #781d4f #ad2f45 #e64539 #ff8933 #ffc2a1
     #2b2b44 #3a3f5f #4c6885 #4fa4b8 #92e8c0 #daf5df
 
-    #da313f #ff8819 #cad4db #ffbe00
+    #da313f #ff8819 #cad4db #ffbe00 #1d9bf0 #aa00ff
 }
 /*
 Switch these lines around if github broken
