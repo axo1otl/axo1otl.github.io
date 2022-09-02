@@ -168,6 +168,10 @@ li.dropdown{
     display: block;
     transition: all 1.5s ease;
 }
+.bold{
+    font-size: 100%;
+    font-weight: bold;
+}
 /*DROPDOWN MENU END*/
 
 /*updates start*/
