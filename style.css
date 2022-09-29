@@ -5,11 +5,17 @@ None
 
 html{
     font-family: 'DM Sans', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar{
+    display: none;
 }
 
 body{
     margin: 0px;
-    background-color:#1b1f21;
+    background-color:#fff;
     background-repeat: no-repeat;
 }
 .mcBackground{
@@ -27,28 +33,32 @@ body{
 
 /* Titile bar start */
 h1{
-    background-color: #2f3539;
-    color: #85939e;
+    background-color: #fff;
+    color: #000;
 
-    font-weight: 500;
+    font-weight: 100;
     font-size: 40px;
     padding: 10px;
-    border-bottom-left-radius: 20px;
-    box-shadow: 0px 0px 25px #12151650;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0px 0px 5px #0001;
+    border-bottom: 1px solid #000;
     margin: 0px;
 }
 .home{
-    color: #ffaeb688;
+    color: #f0a;
 }
 .news{
-    color: #ffc2a188;
+    color: #0af;
 }
 .art{
-    color: #92e8c088;
+    color: #fe0;
 }
 .status_bar{
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 300;
+    background: none;
+    text-shadow: 0px 0px 1px #0002;
 }
 .logo{
     margin-top: -7px;
@@ -59,21 +69,21 @@ h1{
 
 /**/
 h2{
-    margin: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
     background-color: #0000;
-    color: #cad4db;
+    /*color: #cad4db;*/
     font-weight: 200;
     border-radius: 100px;
     
     text-align: center;
     width: auto;
     font-size: 200%;
-    padding-top: 10px;
+    padding-top: 0px;
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    
 }
 
 ul{
@@ -82,42 +92,73 @@ ul{
     overflow: hidden;
     margin: 10px;
 
-    background-color: #85939e40;
+    background-color: #fffa;
     backdrop-filter: -webkit-blur(5px);
     backdrop-filter: blur(5px);
+    border: 1px solid #000;
 
-    color: #cad4db;
     font-weight: 200;
-    border-radius: 100px;
+    border-radius: 2px;
     box-shadow: 0px 0px 20px #12151630;
     text-align: center;
     font-size: 50%;
     transition: all 1s ease;
     width: fit-content;
 
+    z-index: 1;
+
 }
 ul:hover{
     padding-right: 0px;
-    background-color: #1b1f2140;
+    background-color: #fff5;
     transition: all 0.5s ease;
 }
 li{
     float: left;
 }
 li a, .dropbtn{
+    background-color: #fff5;
+    backdrop-filter: blur(5px);
     display: block;
-    color: #cad4db;
+    color: #000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 100%;
     transition: all 1s ease;
 }
+
 li a:hover, .dropdown:hover .dropbtn{
-    background-color: #85939e;
-    border-radius: 30px;
-    margin-right: 20px;
+    /*background-color: #000;*/
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
     transition: all 0.5s ease-out;
+
+}
+.hlist{
+    background-color: #f0a0;
+    transition: all 1s ease;
+}
+.hlist:hover{
+    background-color: #f0a;
+    transition: all 1s ease;
+}
+.nlist{
+    background-color: #0af0;
+    transition: all 1s ease;
+}
+.nlist:hover{
+    background-color: #0af;
+    transition: all 1s ease;
+}
+.alist{
+    background-color: #fe00;
+    transition: all 1s ease;
+}
+.alist:hover{
+    background-color: #fe0;
+    transition: all 1s ease;
 }
 /*DROPDOWN MENU START*/
 li.dropdown{
@@ -178,16 +219,27 @@ li.dropdown{
 h3{
     margin: 10px;
     padding: 10px;
+    padding-top: 0px;
     width: fit-content;
     z-index: -1;
 
-    background-color: #2f3539;
-    box-shadow: 0px 0px 20px #12151630;
-    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #0003;
+    border-radius: 2px;
+    border: 1px solid #000;
 
-    color: #cad4db;
+    color: #000;
     font-weight: 200;
     font-size: 100%;
+
+    transition: all 0.5s ease;
+}
+h3:hover{
+    /*margin: 20px;*/
+    padding-right: 20px;
+    padding-left: 20px;
+
+    transition: all 0.5s ease;
 }
 .bar_ng{
     background-color: #0000;
@@ -210,30 +262,41 @@ h3{
     color: #6871d6;
 }
 .update_content{
-    margin-top: 10px;
-    background-color: #3b4248;
-    border-radius: 20px;
+    background-color: #fff;
 }
 .ttd{
     display: flex;
     margin: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #454d53;
-    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 2px;
     font-weight: bold;
+    border-bottom: 1px solid #000;
 }
 .description{
     max-width: 750px;
     
     margin-top: 10px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 2px;
+
+    border-bottom: 1px solid #0001;
 }
 .content{
     display: flex;
     align-content: center;
     padding-left: 10px;
+}
+.small{
+    max-width: 750px;
+    
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 2px;
+
+    color: #bbb;
+    font-size: 75%;
 }
 .round{
     /*
@@ -253,11 +316,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #ff8819;
     color: #ff8819;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -280,11 +344,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #da313f;
     color: #da313f;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -307,11 +372,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #ffbe00;
     color: #ffbe00;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -323,7 +389,36 @@ h3{
     
     transition: all 0.5s ease;
 }
+.link_git{
+    display: flex;
+    margin-left: 0px;
+    margin-bottom: 10px;
 
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
+    background-color: #fff;
+    border: 1px solid #0d5;
+    color: #0d5;
+    text-decoration: none;
+
+    border-radius: 2px;
+    font-weight: bold;
+
+    transition: all 0.5s ease;
+}
+.link_git:hover{
+    
+    background-color: #0d5;
+    color: #fff;
+
+    margin-left: 1000px;
+    
+    transition: all 10s ease;
+}
 .link_twt{
     display: flex;
     margin-left: 0px;
@@ -335,11 +430,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #1d9bf0;
     color: #1d9bf0;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -363,11 +459,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #bb44ff;
     color: #bb44ff;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -391,11 +488,12 @@ h3{
     padding-top: 1px;
     padding-bottom: 1px;
     
-    background-color: #454d53;
+    background-color: #fff;
+    border: 1px solid #6871d6;
     color: #6871d6;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 2px;
     font-weight: bold;
 
     transition: all 0.5s ease;
@@ -416,13 +514,14 @@ h4{
     margin: 10px;
     padding: 10px;
 
-    background-color: #2f3539c0;
-    backdrop-filter: blur(5px);
+    background-color: #fff;
 
-    color: #cad4db;
-    font-weight: 200;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px #12151630;
+    color: #000;
+    font-weight: 100;
+    border-radius: 2px;
+    
+    border: 1px solid #000;
+    box-shadow: 0px 0px 20px #0003;
     
     max-width: 1000px;
 
