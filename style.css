@@ -432,7 +432,7 @@ h3:hover{
     border-radius: 2px;
     font-weight: bold;
 
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
 }
 .link_git:hover{
     
@@ -441,7 +441,7 @@ h3:hover{
 
     margin-left: 1000px;
     
-    transition: all 10s ease;
+    transition: all 120s ease;
 }
 .link_twt{
     display: flex;
