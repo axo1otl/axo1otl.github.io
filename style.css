@@ -160,6 +160,30 @@ li a:hover, .dropdown:hover .dropbtn{
     background-color: #fe0;
     transition: all 1s ease;
 }
+.hlist{
+    background-color: #f0a0;
+    transition: all 1s ease;
+}
+.hlist:hover{
+    background-color: #f0a;
+    transition: all 1s ease;
+}
+.nlist{
+    background-color: #0af0;
+    transition: all 1s ease;
+}
+.nlist:hover{
+    background-color: #0af;
+    transition: all 1s ease;
+}
+.alist{
+    background-color: #fe00;
+    transition: all 1s ease;
+}
+.alist:hover{
+    background-color: #fe0;
+    transition: all 1s ease;
+}
 /*DROPDOWN MENU START*/
 li.dropdown{
     display: inline-block;
