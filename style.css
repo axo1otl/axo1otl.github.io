@@ -565,13 +565,43 @@ h4{
     z-index: -1;
 }
 
+h5{
+    padding: 10px;
+    padding-bottom: 1px;
+    width: fit-content;
+    
+    background-color: #fff;
+    color: #000;
+    font-weight: 100;
+    font-size: 100%;
+    
+    border-radius: 2px;
+    border: 1px solid #000;
+
+    text-align: center;
+
+}
+.myart{
+    box-shadow: inset 0px -24px 0px #f0a;
+    margin: 10px;
+    width: fit-content;
+}
+.userart{
+    box-shadow: inset 0px -24px 0px #0af;
+    margin: 10px;
+    width: fit-content;
+}
+.art{
+    margin: 10px;
+    margin-bottom: 24px;
+    width: 480px;
+    height: auto;
+}
+
 .social_link{
     color: #121516;
 }
 
-.art{
-    margin: 10px;
-}
 colors{
     color: #fff
     #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
