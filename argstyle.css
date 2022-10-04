@@ -1,10 +1,10 @@
-@media (hover: hover) {
+@media (hover: none) {
     .nophone {
         color: #fff0;
     }
 }
 
-@media (hover: none) {
+@media (hover: hover) {
     .nophone {
         color: #ffff;
     }
@@ -19,6 +19,7 @@
     min-height: 100%;
     z-index: -100;
     filter: brightness(1.5);
+    filter: contrast(0.9);
 }
 .arg_1st{
     color: #ffffff05;
