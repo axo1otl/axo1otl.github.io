@@ -628,8 +628,8 @@ Switch these lines around if github broken
     color: #fff;
     text-align: center;
 
-    padding-top: 500px;
+    padding-top: 35%;
 
     width: 100%;
-    height: 100%;
+    max-height: 100vh;
 }
