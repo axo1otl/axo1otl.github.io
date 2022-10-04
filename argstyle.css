@@ -1,9 +1,9 @@
-.nophone {
+.hover {
     color: #f00;
 }
 
 @media (hover: hover) {
-    .nophone {
+    .hover {
         display: none;
     }
 }
