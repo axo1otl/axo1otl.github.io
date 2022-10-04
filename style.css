@@ -615,21 +615,3 @@ colors{
 Switch these lines around if github broken
 Switch these lines around if github broken
 */
-
-#arg_bg{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -100;
-}
-.arg_1st{
-    color: #fff;
-    text-align: center;
-
-    padding-top: 35%;
-
-    width: 100%;
-    max-height: 100vh;
-}
