@@ -7,6 +7,7 @@ html{
     -ms-overflow-style: none;
     scrollbar-width: none;
     font-family: 'Syne Mono', monospace;
+
 }
 
 html::-webkit-scrollbar{
@@ -16,10 +17,10 @@ html::-webkit-scrollbar{
 .hover {
     background-color: #0008;
     
-    color: #fff;
     text-align: center;
     font-size: 24px;
     text-shadow: 0px 0px 10px #fff;
+    color: #fff;
     
     width: auto;
     min-height: 100vh;
@@ -30,7 +31,6 @@ html::-webkit-scrollbar{
     position: fixed;
     place-items: center;
 }
-
 .arg_1st{
     display: none;
 }
@@ -59,7 +59,8 @@ html::-webkit-scrollbar{
     color: #ffffff05;
     font-size: 32px;
     text-align: center;
-
+    text-shadow: 0px 0px 10px #ffffff05;
+    
     padding-top: 35%;
 
     width: 100%;
@@ -68,7 +69,8 @@ html::-webkit-scrollbar{
 }
 
 .arg_1st:hover{
-    color: #fff8;
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
     font-size: 32px;
     text-align: center;
 
@@ -76,5 +78,5 @@ html::-webkit-scrollbar{
 
     width: 100%;
     max-height: 100vh;
-    transition: all 60s ease;
+    transition: all 10s ease;
 }
