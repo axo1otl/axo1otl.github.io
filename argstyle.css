@@ -7,7 +7,7 @@ html{
     -ms-overflow-style: none;
     scrollbar-width: none;
     font-family: 'Syne Mono', monospace;
-
+    background-color: #000;
 }
 
 html::-webkit-scrollbar{
