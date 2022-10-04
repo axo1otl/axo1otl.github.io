@@ -1,14 +1,13 @@
 .nophone {
-    color: #fff;
+    color: #f00;
 }
 
-/*
-@media (hover: none) {
+@media (hover: hover) {
     .nophone {
         display: none;
     }
 }
-*/
+
 
 #arg_bg{
     position: fixed;
