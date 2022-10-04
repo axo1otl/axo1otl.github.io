@@ -2,12 +2,13 @@
     color: #fff;
 }
 
+/*
 @media (hover: none) {
     .nophone {
         display: none;
     }
 }
-
+*/
 
 #arg_bg{
     position: fixed;
