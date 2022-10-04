@@ -2,7 +2,7 @@
     color: #fff;
 }
 
-@media (hover: none) {
+@media (hover: hover) {
     .nophone {
         display: none;
     }
