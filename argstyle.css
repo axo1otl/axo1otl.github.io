@@ -1,12 +1,10 @@
-@media (hover: none) {
-    .nophone {
-        color: #fff0;
-    }
+.nophone {
+    color: #fff;
 }
 
-@media (hover: hover) {
+@media (hover: none) {
     .nophone {
-        color: #ffff;
+        display: none;
     }
 }
 
