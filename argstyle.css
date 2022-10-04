@@ -6,6 +6,7 @@ font-family: 'VT323', monospace;
 html{
     -ms-overflow-style: none;
     scrollbar-width: none;
+    font-family: 'Syne Mono', monospace;
 }
 
 html::-webkit-scrollbar{
@@ -15,7 +16,6 @@ html::-webkit-scrollbar{
 .hover {
     background-color: #0008;
     
-    font-family: 'Syne Mono', monospace;
     color: #fff;
     text-align: center;
     font-size: 24px;
