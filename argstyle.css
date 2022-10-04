@@ -16,6 +16,7 @@ html::-webkit-scrollbar{
 
 .hover {
     background-color: #0008;
+    backdrop-filter: blur(5px);
     
     text-align: center;
     font-size: 24px;
