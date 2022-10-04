@@ -1,3 +1,16 @@
+@media (hover: hover) {
+    .nophone {
+        color: #fff0;
+    }
+}
+
+@media (hover: none) {
+    .nophone {
+        color: #ffff;
+    }
+}
+
+
 #arg_bg{
     position: fixed;
     right: 0;
@@ -5,7 +18,7 @@
     min-width: 100%;
     min-height: 100%;
     z-index: -100;
-    filter: brightness(2);
+    filter: brightness(1.5);
 }
 .arg_1st{
     color: #ffffff05;
@@ -28,5 +41,5 @@
 
     width: 100%;
     max-height: 100vh;
-    transition: all 5s ease;
+    transition: all 60s ease;
 }
