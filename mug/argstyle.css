@@ -57,6 +57,15 @@ html::-webkit-scrollbar{
     z-index: -100;
     filter: brightness(1.2) blur(3px) contrast(0.9);
 }
+#arg_bg_dark{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    filter: brightness(0.8) blur(7px) contrast(0.8);
+}
 
 .arg_1{
     color: #ffffff05;
@@ -78,6 +87,20 @@ html::-webkit-scrollbar{
     text-align: center;
 
     padding-top: 35%;
+
+    width: 100%;
+    max-height: 95vh;
+    transition: all 10s ease;
+}
+
+.argtext{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 1rem;
+
+    place-items: center;
 
     width: 100%;
     max-height: 95vh;
@@ -157,6 +180,28 @@ html::-webkit-scrollbar{
 
     width: 100%;
 }
+.puzzle_2a{
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff;
+    text-decoration: none;
+    display: block;
+
+    padding-top: 100px;
+
+    width: 100%;
+}
+.puzzle_2b{
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff;
+    text-decoration: none;
+    display: block;
+
+    width: 100%;
+}
 
 .pi{
     color: #f7a;
@@ -191,7 +236,59 @@ html::-webkit-scrollbar{
 }
 .or:hover{
     color: #fab;
-    text-shadow: 0px 0px 7px #f78;
+    text-shadow: 0px 0px 7px #f70;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.re{
+    color: #f44;
+    text-shadow: 0px 0px 10px #f55;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.re:hover{
+    color: #f79;
+    text-shadow: 0px 0px 7px #f00;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.blu{
+    color: #66f;
+    text-shadow: 0px 0px 10px #55f;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.blu:hover{
+    color: #aaf;
+    text-shadow: 0px 0px 7px #00f;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.ye{
+    color: #fd8;
+    text-shadow: 0px 0px 10px #fa5;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.ye:hover{
+    color: #fed;
+    text-shadow: 0px 0px 9px #f60;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.pu{
+    color: #a4a;
+    text-shadow: 0px 0px 10px #a0a;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.pu:hover{
+    color: #d9d;
+    text-shadow: 0px 0px 7px #f0f;
     text-decoration: none;
     transition: all 1s ease;
 }
