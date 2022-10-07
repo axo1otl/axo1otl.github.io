@@ -32,16 +32,16 @@ html::-webkit-scrollbar{
     position: fixed;
     place-items: center;
 }
-.arg_1st{
-    display: none;
+.arg_1{
+    display: block;
 }
 
 @media (hover: hover) {
     .hover {
-        display: none;
+        display: grid;
     }
     .arg_1st{
-        display: block;
+        display: none;
     }
 }
 
@@ -52,11 +52,10 @@ html::-webkit-scrollbar{
     min-width: 100%;
     min-height: 100%;
     z-index: -100;
-    filter: brightness(1.2);
-    filter: contrast(0.9);
+    filter: brightness(1.2) contrast(0.9);
 }
 
-.arg_1st{
+.arg_1{
     color: #ffffff05;
     font-size: 32px;
     text-align: center;
@@ -65,11 +64,11 @@ html::-webkit-scrollbar{
     padding-top: 35%;
 
     width: 100%;
-    max-height: 100vh;
-    transition: all 1s ease;
+    max-height: 95vh;
+    transition: all 6000s ease;
 }
 
-.arg_1st:hover{
+.arg_1:hover{
     color: #ffff;
     text-shadow: 0px 0px 10px #ffff;
     font-size: 32px;
@@ -78,6 +77,26 @@ html::-webkit-scrollbar{
     padding-top: 35%;
 
     width: 100%;
-    max-height: 100vh;
-    transition: all 10s ease;
+    max-height: 95vh;
+    transition: all 20s ease;
+}
+
+.arg_2{
+    color: #ffffff05;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff05;
+
+    width: 100%;
+    transition: all 6000s ease;
+}
+
+.arg_2:hover{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+
+    width: 100%;
+    transition: all 60s ease;
 }
