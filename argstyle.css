@@ -38,7 +38,7 @@ html::-webkit-scrollbar{
 
 @media (hover: hover) {
     .hover {
-        display: grid;
+        display: none;
     }
     .arg_1st{
         display: none;
