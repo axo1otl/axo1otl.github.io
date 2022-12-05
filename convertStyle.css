@@ -1,0 +1,114 @@
+html{
+    font-family: 'Consolas', monaco, monospace;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    margin: 0px;
+    background-color:#121516;
+    background-repeat: no-repeat;
+    color: #5ab;
+}
+
+.input{
+    /* COLORS */
+    background-color: #1b1f21;
+    color: #85939e;
+    border: #1b1f21;
+    border-radius: 1%;
+    
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 1%;
+    width: auto;
+    outline: none;
+    place-items: center;
+    
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 30px;
+    font-weight: 100;
+    transition: color 0.5s;
+}
+.input::selection{
+    background-color: #454d53;
+}
+
+.inBox{
+    /* COLORS */
+    background-color: #2f3539;
+    color: #85939e;
+    border: #1b1f21;
+    border-radius: 10px;
+    outline: none;
+    
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 20px;
+    width: auto;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 32px;
+    font-weight: 100;
+    transition: color 0.5s;
+}
+
+.inBox:focus{
+    color: #fff;
+    transition: color 0.5s;
+}
+.inBox::selection{
+    background-color: #454d53;
+}
+
+.outBox{
+    /* COLORS */
+    background-color: #1b1f21;
+    color: #ffb133;
+
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 1%;
+    width: auto;
+    height: max-content;
+    display: flex;
+    word-wrap:break-word;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 72px;
+    font-weight: bold;
+}
+.outBox::selection{
+    background-color: #2f3539;
+}
+
+.result::selection{
+    color: #2f3539;
+    background-color: #ffb133;
+}
+
+.default{
+    color: #454d53;
+}
+.default::selection{
+    background-color: #ffb133;
+}
+
+colors{
+    color: #fff
+    #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
+    #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
+    #4f1d4c #781d4f #ad2f45 #e64539 #ffb133 #ffc2a1
+    #2b2b44 #3a3f5f #4c6885 #5ab #92e8c0 #daf5df
+
+    #da313f #ff8819 #cad4db #ffbe00 #1d9bf0 #aa00ff #6871d6;
+}

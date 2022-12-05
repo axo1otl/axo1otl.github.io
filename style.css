@@ -160,12 +160,12 @@ li a:hover, .dropdown:hover .dropbtn{
     background-color: #fe0;
     transition: all 1s ease;
 }
-.hlist{
+.mlist{
     background-color: #f0a0;
     transition: all 1s ease;
 }
-.hlist:hover{
-    background-color: #f0a;
+.mlist:hover{
+    background-color: #000;
     transition: all 1s ease;
 }
 .nlist{
@@ -444,7 +444,7 @@ h3:hover{
     border-radius: 2px;
     font-weight: bold;
 
-    transition: all 120s ease;
+    transition: all 0.5s ease;
 }
 .link_git:hover{
     
