@@ -15,6 +15,31 @@ body{
     color: #5ab;
 }
 
+.title{
+    /* COLORS */
+    background-color: #1b1f21;
+    color: #ffb133;
+    text-decoration: none;
+
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 1%;
+    width: auto;
+    height: max-content;
+    display: flex;
+    word-wrap:break-word;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 72px;
+    font-weight: normal;
+}
+
+.logo{
+    color: #ffb133;
+    text-decoration: none;
+}
+
 .input{
     /* COLORS */
     background-color: #1b1f21;
@@ -96,6 +121,87 @@ body{
     background-color: #ffb133;
 }
 
+.other{
+    /* COLORS */
+    background-color: #1b1f21;
+    color: #ffb133;
+
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 1%;
+    width: auto;
+    height: max-content;
+    display: flex;
+    word-wrap:break-word;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 24px;
+    font-weight: normal;
+}
+.other::selection{
+    background-color: #2f3539;
+}
+
+.embed{
+    /* COLORS */
+    background-color: #2f3539;
+    color: #ffb133;
+    border-radius: 10px;
+    border: 0px solid #121516;
+
+    /* CONTAINER MANIPULATION */
+    margin: 5%;
+    margin-bottom: 0px;
+    padding: 5%;
+    width: 90%;
+    height: max-content;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    transition: all 0.5s;
+}
+.embed:hover{
+    /*border: 5px solid #ffb133;*/
+    box-shadow: 10px 10px 1px #ffb133;
+}
+
+.embedTitle{
+    /* COLORS */
+    border-bottom: #85939e;
+    
+    /* CONTAINER MANIPULATION */
+    margin-top: 0px;
+    
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.embedText{
+    padding: 1%;
+    border-radius: 5px;
+    color: #ffb133;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.embedText:hover{
+    padding-right: 50%;
+    background-color: #ffb133;
+    color: #2f3539;
+}
+
+.embedDesc{
+    /* COLORS */
+    color: #85939e;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 16px;
+    font-weight: normal;
+}
+
 .default{
     color: #454d53;
 }
@@ -103,12 +209,18 @@ body{
     background-color: #ffb133;
 }
 
+.otherProjects{
+    background-color: #1b1f21;
+
+    display: grid;
+    gap: 1%;
+    
+    grid-template-columns: 24% 24% 24% 23%;
+    padding-bottom: 1%;
+}
+
 colors{
     color: #fff
     #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
-    #232a3d #39314b #564064 #8e478c #cd6093 #ffaeb6
-    #4f1d4c #781d4f #ad2f45 #e64539 #ffb133 #ffc2a1
-    #2b2b44 #3a3f5f #4c6885 #5ab #92e8c0 #daf5df
-
-    #da313f #ff8819 #cad4db #ffbe00 #1d9bf0 #aa00ff #6871d6;
+    #ffb133
 }
