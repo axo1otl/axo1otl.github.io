@@ -31,7 +31,7 @@ body{
     
     /* FONT */
     font-family: 'Consolas', monaco, monospace;
-    font-size: 72px;
+    font-size: 16px;
     font-weight: normal;
     text-decoration: none;
     
@@ -50,91 +50,6 @@ body{
     margin-right: 1%;
     text-decoration: none;
     align-self: center;
-}
-
-.input{
-    /* COLORS */
-    background-color: #1b1f21;
-    color: #85939e;
-    border: #1b1f21;
-    border-radius: 1%;
-    
-    /* CONTAINER MANIPULATION */
-    margin: 1%;
-    padding: 1%;
-    width: auto;
-    outline: none;
-    place-items: center;
-    
-    /* FONT */
-    font-family: 'Consolas', monaco, monospace;
-    font-size: 30px;
-    font-weight: 100;
-
-    transition: color 0.5s;
-}
-.input::selection{
-    background-color: #454d53;
-}
-
-.inBox{
-    /* COLORS */
-    background-color: #2f3539;
-    color: #85939e;
-    border: #1b1f21;
-    border-radius: 10px;
-    outline: none;
-    
-    /* CONTAINER MANIPULATION */
-    margin: 1%;
-    padding: 20px;
-    width: auto;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-    
-    /* FONT */
-    font-family: 'Consolas', monaco, monospace;
-    font-size: 32px;
-    font-weight: 100;
-
-    /* FILTER / EFFECTS */
-
-    transition: all 0.5s;
-}
-.inBox:focus{
-    color: #fff;
-    filter: blur(0px);
-    transition: all 0.5s;
-}
-.inBox::selection{
-    background-color: #454d53;
-}
-
-.outBox{
-    /* COLORS */
-    background-color: #1b1f21;
-    color: #ffb133;
-
-    /* CONTAINER MANIPULATION */
-    margin: 1%;
-    padding: 1%;
-    width: auto;
-    height: max-content;
-    display: flex;
-    word-wrap:break-word;
-
-    /* FONT */
-    font-family: 'Consolas', monaco, monospace;
-    font-size: 72px;
-    font-weight: bold;
-}
-.outBox::selection{
-    background-color: #2f3539;
-}
-
-.result::selection{
-    color: #2f3539;
-    background-color: #ffb133;
 }
 
 .other{
@@ -158,6 +73,93 @@ body{
 .other::selection{
     background-color: #2f3539;
 }
+
+
+
+
+
+.grid{
+    background-color: #1b1f21;
+
+    display: grid;
+    gap: 1%;
+    
+    grid-template-columns: 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5%;
+    padding-bottom: 1%;
+    filter: blur(3px) brightness(0.8);
+    transition: all 2s;
+}
+.grid:hover{
+    filter: blur(0px);
+    transition: all 0.5s;
+}
+.focus{
+    /* COLORS */
+    background-color: #2f3539;
+    color: #ffb133;
+    border-radius: 10px;
+    border: 0px solid #121516;
+
+    /* CONTAINER MANIPULATION */
+    margin: 5%;
+    margin-bottom: 0px;
+    padding: 5%;
+    width: 90%;
+    height: max-content;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+
+    /* FILTER / EFFECTS */
+    filter: blur(3px) brightness(0.8);
+    
+    transition: all 2s;
+}
+.focus:hover{
+    /*border: 5px solid #ffb133;*/
+    filter: blur(0px) brightness(1.2);
+    transition: all 0.5s;
+}
+
+.focusTitle{
+    /* COLORS */
+    border-bottom: #85939e;
+    
+    /* CONTAINER MANIPULATION */
+    margin-top: 0px;
+    
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.focusText{
+    padding: 1%;
+    border-radius: 5px;
+    color: #ffb133;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.focusText:hover{
+    padding-right: 10%;
+    background-color: #ffb133;
+    color: #2f3539;
+}
+
+.focusDesc{
+    /* COLORS */
+    color: #85939e;
+
+    /* FONT */
+    font-family: 'Consolas', monaco, monospace;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+
+
 
 .embed{
     /* COLORS */
