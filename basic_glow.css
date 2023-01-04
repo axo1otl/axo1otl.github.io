@@ -4,10 +4,10 @@ html{
 }
 
 body{
-    color: #fff;
+    color: #ffff;
     font-size: 16;
     font-weight: bold;
 }
 pre{
-    text-shadow: 0px 0px 10px #afff;
+    text-shadow: 0px 0px 5px #cffa;
 }
