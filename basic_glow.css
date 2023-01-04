@@ -1,6 +1,13 @@
 html{
     font-family: 'Consolas', monaco, monospace;
     background-color: #000;
+}
+
+body{
     color: #fff;
-    text-shadow: 0px 0px 10px #fff5;
+    font-size: 16;
+    font-weight: bold;
+}
+pre{
+    text-shadow: 0px 0px 10px #afff;
 }
