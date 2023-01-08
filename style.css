@@ -4,9 +4,11 @@ None
 */
 
 html{
-    font-family: 'DM Sans', sans-serif;
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: consolas;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    transform: translateY(-100vh);
 }
 
 html::-webkit-scrollbar{
@@ -15,7 +17,7 @@ html::-webkit-scrollbar{
 
 body{
     margin: 0px;
-    background-color:#fff;
+    background-color:#000;
     background-repeat: no-repeat;
 }
 .mcBackground{
@@ -33,16 +35,16 @@ body{
 
 /* Titile bar start */
 h1{
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 
     font-weight: 100;
     font-size: 40px;
     padding: 10px;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    box-shadow: 0px 0px 5px #0001;
-    border-bottom: 1px solid #000;
+    box-shadow: 0px 0px 5px #fff1;
+    border-bottom: 1px solid #fff;
     margin: 0px;
 }
 .home{
@@ -55,10 +57,10 @@ h1{
     color: #fe0;
 }
 .status_bar{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 300;
     background: none;
-    text-shadow: 0px 0px 1px #0002;
+    text-shadow: 0px 0px 5px;
 }
 .logo{
     margin-top: -7px;
@@ -92,10 +94,10 @@ ul{
     overflow: hidden;
     margin: 10px;
 
-    background-color: #fffa;
+    background-color: #0008;
     backdrop-filter: -webkit-blur(5px);
     backdrop-filter: blur(5px);
-    border: 1px solid #000;
+    border: 1px solid #fff;
 
     font-weight: 200;
     border-radius: 2px;
@@ -110,17 +112,17 @@ ul{
 }
 ul:hover{
     padding-right: 0px;
-    background-color: #fff5;
+    background-color: #0005;
     transition: all 0.5s ease;
 }
 li{
     float: left;
 }
 li a, .dropbtn{
-    background-color: #fff5;
+    background-color: #0005;
     backdrop-filter: blur(5px);
     display: block;
-    color: #000;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -242,28 +244,39 @@ li.dropdown{
 /*updates start*/
 h3{
     margin: 10px;
+
+    margin-left: 20%;
+    margin-right: 20%;
+
     padding: 10px;
     padding-top: 0px;
     width: auto;
     z-index: -1;
 
-    background-color: #fff;
-    box-shadow: 0px 0px 20px #0003;
-    border-radius: 2px;
-    border: 1px solid #000;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 50px #fff0;
+    border-radius: 5px;
+    border: 1px solid #fff0;
 
-    color: #000;
-    font-weight: 200;
-    font-size: 100%;
+    color: #fffa;
+    font-weight: bold;
+    font-size: 16;
+
+    backdrop-filter: blur(5px);
 
     transition: all 0.5s ease;
 }
 h3:hover{
     /*margin: 20px;*/
-    padding-right: 20px;
-    padding-left: 20px;
-
-    transition: all 0.5s ease;
+    margin-left: 18%;
+    margin-right: 18%;
+    padding-left: calc(2% + 10px);
+    padding-right: calc(2% + 10px);
+    border: 1px solid #fffa;
+    box-shadow: inset 0px 0px 50px #fff5;
+    text-shadow: 0px 0px 5px;
+    
+    transition: all 0.5s, box-shadow 2s, border 2s;
 }
 .bar_ng{
     background-color: #0000;
@@ -289,30 +302,32 @@ h3:hover{
     background-color: #0000;
     color: #f0a;
 }
-.new{
-    box-shadow: inset 0px 24px 0px #92e8c0;
-}
 .newtext{
-
-    color: #fff;
+    color: #0af;
     font-weight: bold;
+    font-size: 32;
+    width: auto;
+    border: solid 1px #0af;
+    border-radius: 100px;
 
-    margin-bottom: 10px;
+    margin: 10px;
+    margin-top: 15px;
     padding-left: 0px;
     text-align: center;
+    transition: 0.5s;
 }
+
 .update_content{
-    background-color: #fff;
+    background-color: #0000;
 }
 .ttd{
     display: flex;
     margin: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #fff;
     border-radius: 2px;
     font-weight: bold;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff2;
 }
 .description{
     
@@ -336,7 +351,7 @@ h3:hover{
     padding: 10px;
     border-radius: 2px;
 
-    color: #bbb;
+    color: #fff5;
     font-size: 75%;
 }
 .round{
@@ -356,8 +371,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #ff8819;
     color: #ff8819;
     text-decoration: none;
@@ -368,7 +382,6 @@ h3:hover{
     transition: all 0.5s ease;
 }
 .link_ng:hover{
-    
     background-color: #ff8819;
     color: #fff;
     
@@ -384,8 +397,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #da313f;
     color: #da313f;
     text-decoration: none;
@@ -412,8 +424,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #ffbe00;
     color: #ffbe00;
     text-decoration: none;
@@ -440,8 +451,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #0d5;
     color: #0d5;
     text-decoration: none;
@@ -470,8 +480,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #1d9bf0;
     color: #1d9bf0;
     text-decoration: none;
@@ -499,8 +508,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #bb44ff;
     color: #bb44ff;
     text-decoration: none;
@@ -528,8 +536,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #6871d6;
     color: #6871d6;
     text-decoration: none;
@@ -557,8 +564,7 @@ h3:hover{
 
     padding-top: 1px;
     padding-bottom: 1px;
-    
-    background-color: #fff;
+
     border: 1px solid #85939e;
     color: #85939e;
     text-decoration: none;
@@ -636,6 +642,32 @@ h5{
     color: #121516;
 }
 
+pre{
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+
+    font-size: 16px;
+    background-color: #fff1;
+    color: #fff5;
+    border-radius: 5px;
+    border: solid 1px #fff0;
+    box-shadow: inset 0px 0px 20px #fff0;
+    transition: all 1s;
+}
+h3:hover pre{
+    color: #fff8;
+    text-shadow: 0px 0px 5px #fff2;
+    border: solid 1px #fff4;
+    box-shadow: inset 0px 0px 20px #fff2;
+    transition: all 1s;
+}
+
+.description a{
+    font-weight: bold;
+    color: #f0a;
+}
+
 colors{
     color: #fff
     #121516 #1b1f21 #2f3539 #454d53 #5d676f #85939e
@@ -649,3 +681,18 @@ colors{
 Switch these lines around if github broken
 Switch these lines around if github broken
 */
+
+canvas{
+    height: 100%;
+    transform: translateY(100vh);
+}
+.particles{
+    position: sticky;
+    /*
+    */
+    top: 0;
+    left: 0;
+    z-index: -100;
+    max-width: 100vw;
+    height: 100%;
+}
