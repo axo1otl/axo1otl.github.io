@@ -371,21 +371,21 @@ window[pluginName] = function(elem, options) {
 };
 
 window[pluginName].defaults = {
-    minSpeedX: 0.3,
-    minSpeedY: 0.3,
-    maxSpeedX: 0.3,
-    maxSpeedY: 0.3,
+    minSpeedX: 0.1,
+    minSpeedY: 0.1,
+    maxSpeedX: 0.9,
+    maxSpeedY: 0.9,
     directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
     directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
-    density: 400000, // How many particles will be generated: one particle every n pixels
+    density: 350000, // How many particles will be generated: one particle every n pixels
     dotColor: '#666666',
     lineColor: '#666666',
     particleRadius: 0, // Dot size
-    lineWidth: 0,
+    lineWidth: 1.5,
     curvedLines: false,
     proximity: 500, // How close two dots need to be before they join
     parallax: true,
-    parallaxMultiplier: 5, // The lower the number, the more extreme the parallax effect
+    parallaxMultiplier: 10, // The lower the number, the more extreme the parallax effect
     onInit: function() {},
     onDestroy: function() {}
 };

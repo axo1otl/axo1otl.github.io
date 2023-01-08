@@ -2,6 +2,9 @@
 References:
 None
 */
+:root{
+    --bgColor: #000 ;
+}
 
 html{
     /*font-family: 'DM Sans', sans-serif;*/
@@ -17,7 +20,7 @@ html::-webkit-scrollbar{
 
 body{
     margin: 0px;
-    background-color:#000;
+    background-color: var(--bgColor);
     background-repeat: no-repeat;
 }
 .mcBackground{
@@ -675,7 +678,12 @@ colors{
     #4f1d4c #781d4f #ad2f45 #e64539 #ff8933 #ffc2a1
     #2b2b44 #3a3f5f #4c6885 #4fa4b8 #92e8c0 #daf5df
 
+    #228B22 #FFD700 #ADFF2F #FF69B4 #CD5C5C #4B0082
+    #7CFC00 #8eb2be #E84643 #ED0A07 #EA2907 #E5294B
+    #E00D26 #FF3030 #FC7500 #F95700 #F43900 #F95620
+
     #da313f #ff8819 #cad4db #ffbe00 #1d9bf0 #aa00ff #6871d6;
+    
 }
 /*
 Switch these lines around if github broken
