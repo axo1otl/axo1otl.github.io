@@ -6,7 +6,7 @@ font-family: 'VT323', monospace;
 html{
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-family: 'Syne Mono', monospace;
+    font-family: 'Consolas', monospace;
     background-color: #000;
 }
 
@@ -64,7 +64,7 @@ html::-webkit-scrollbar{
     min-width: 100%;
     min-height: 100%;
     z-index: -100;
-    filter: brightness(0.8) blur(7px) contrast(0.8);
+    filter: brightness(0.2) blur(7px);
 }
 
 .arg_1{
@@ -291,4 +291,69 @@ html::-webkit-scrollbar{
     text-shadow: 0px 0px 7px #f0f;
     text-decoration: none;
     transition: all 1s ease;
+}
+
+.passwords{
+    display: flex;
+    mix-blend-mode:screen;
+    width: auto;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+.passwords .input{
+    font-family: 'Consolas', monospace;
+    mix-blend-mode:screen;
+    color: #fff;
+    font-size: 72;
+    text-shadow: 0px 0px 15px #cff;
+    background-color: #fff0;
+    height: 72px;
+    position: absolute;
+    top: calc(50% - 46px);
+}
+.passwords input{
+    font-family: 'Consolas', monospace;
+    mix-blend-mode:screen;
+    color: #fff;
+    font-size: 72;
+    text-shadow: 0px 0px 15px #cff;
+    background-color: #fff0;
+    transition: 0.1s;
+}
+.passwords .inBox{
+    text-align: center;
+    border-color: #fff8;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 20px #fff5;
+    transition: 0.1s;
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+.passwords .hidden{
+    visibility: hidden;
+}
+
+.arg_hints{
+    color: #fff0;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff5;
+
+    width: 100%;
+    transition: all 1s ease;
+}
+.arg_hints:hover{
+    color: #fff8;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff5;
+
+    width: 100%;
+    height: fit-content;
+    transition: all 60s ease;
+}
+.arg_hints::selection{
+    background-color: #0000;
 }

@@ -17,23 +17,16 @@
     <div class="passwords">
         <form name="login" class="input" id="form">
             <input value=">" onclick="pasuser(this.form)" type="button" id="button" class="hidden">
-            <input id="pass" size="10" placeholder="----" class="inBox" onsubmit="return dont_submit()">
+            <input id="pass" size="10" placeholder="--------" class="inBox" onsubmit="return dont_submit()">
             <input value=">" onclick="pasuser(this.form)" type="button" class="button">
         </form>
-        <div class="arg_hints">
-            crc-32
-            <br>
-            sort through your sticks
-            <br>
-            dig through all the cracks
-            <br>
-            you might get some good news
+        <div class="arg_hint">
+            4e55608a
         </div>
         <script language="javascript">
             function delay(time) {
                 return new Promise(resolve => setTimeout(resolve, time));
             }
-
             document.getElementById("form")
                 .addEventListener("keydown", function(event) {
                     if (event.keyCode === 13) {
