@@ -29,7 +29,7 @@
       function generateButtons() {
         const container = document.createElement('div');
         container.classList.add('grid-container');
-        for (let i = 0; i < 10000; i++) { // i < 65536 // dead space at 55296
+        for (let i = 0; i < 55296; i++) { // i < 65536 // dead space at 55296
           const character = String.fromCharCode(i);
           const button = document.createElement('div');
           button.classList.add('grid-item');
