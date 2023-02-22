@@ -22,6 +22,51 @@
 				document.execCommand('copy');
 				document.body.removeChild(el);
 			}
+			function prevPage(){
+				const pageNum = document.getElementById('pageNum').value;
+				if (pageNum > 1){
+					document.getElementById('pageNum').value = pageNum - 1;
+				}
+				if (pageNum < 1){
+					document.getElementById('pageNum').value = 1;
+				}
+				generateButtons();
+			}
+			function nextPage(){
+				const pageNum = document.getElementById('pageNum').value;
+				const pageAmnt = document.getElementById('pageAmnt').value;
+				const maxPage = Math.floor(65536 / pageAmnt) + 1;
+				
+				if (pageNum < maxPage){
+					document.getElementById('pageNum').value = parseInt(pageNum) + 1;
+				}
+				if (pageNum > maxPage){
+					document.getElementById('pageNum').value = maxPage;
+				}
+				generateButtons();
+			}
+			function prevAmnt(){
+				const pageAmnt = document.getElementById('pageAmnt').value;
+				const amntList = [10,25,50,100,250,500,1000];
+				for (let i = 0; i < amntList.length; i++){
+					
+				}
+
+				generateButtons();
+			}
+			function nextAmnt(){
+				const pageNum = document.getElementById('pageNum').value;
+				const pageAmnt = document.getElementById('pageAmnt').value;
+				const maxPage = Math.floor(65536 / pageAmnt) + 1;
+				
+				if (pageNum < maxPage){
+					document.getElementById('pageNum').value = parseInt(pageNum) + 1;
+				}
+				if (pageNum > maxPage){
+					document.getElementById('pageNum').value = maxPage;
+				}
+				generateButtons();
+			}
 			function generateButtons() {
 				const pageNum = document.getElementById('pageNum').value;
 				const pageAmnt = document.getElementById('pageAmnt').value;
@@ -35,7 +80,11 @@
         		}
 				
 				container.classList.add('grid-container');
-				for (let i = pageAmnt * (pageNum-1); i < pageAmnt * pageNum; i++) { // i < 65536 // dead space at 55296
+				var lastCharIndex = pageAmnt * pageNum;
+				if (lastCharIndex > 65536){
+					lastCharIndex = 65536;
+				}
+				for (let i = pageAmnt * (pageNum-1); i < lastCharIndex; i++) { // i < 65536 // dead space at 55296
 					const character = String.fromCharCode(i);
 					const button = document.createElement('div');
 					button.classList.add('grid-item');
@@ -69,8 +118,13 @@
     	        </div>
     	        <p class="Description">
 					<div class="input">
+						<pageManager class="pages" onclick="prevPage()"><</pageManager>
 						<input class="inBox" type="text" id="pageNum" placeholder="Page" value="1" oninput="generateButtons()">
+						<pageManager class="pages" onclick="nextPage()">></pageManager>
+						<space></space>
+						<pageManager class="pages" onclick="prevAmnt()"><</pageManager>
 						<input class="inBox" type="text" id="pageAmnt" placeholder="Amount Per" value="500" oninput="generateButtons()">
+						<pageManager class="pages" onclick="nextAmnt()">></pageManager>
 					</div>
 				</p>
     	        <div class="content">

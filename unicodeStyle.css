@@ -170,7 +170,6 @@ button:hover{
     border-bottom: 1px solid #fff2;
 }
 .description{
-    
     margin-top: 10px;
     padding: 10px;
     border-radius: 2px;
@@ -224,12 +223,44 @@ button:hover{
     /* CONTAINER MANIPULATION */
     margin: 1%;
     padding: 10px;
-    width: auto;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: 0%;
     
     /* FONT */
 
     /* FILTER / EFFECTS */
     transition: all 0.5s;
+}
+.pages{
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 50px #fff2;
+    border-radius: 5px;
+    border: 2px solid #fff3;
+    text-shadow: 0px 0px 2px;
+
+    color: #fffa;
+    font-family: consolas;
+    font-weight: normal; /* bold */
+    font-size: 32;
+    
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 10px;
+    width: 20%;
+    
+
+    /* FILTER / EFFECTS */
+    transition: all 0.5s;
+}
+.pages::selection{
+    background-color: #0000;
+}
+.grid-container::selection{
+    background-color: #0000;
+}
+space{
+    margin-left: calc((1% + 10px + 20%) * 1.5);
 }
 
 colors{
