@@ -9,6 +9,10 @@
         <input id="input" type="text" autofocus />
         <script>
             var helpId = 1
+            var event = 0
+            var health = 3
+            var keys = 0
+            var FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
             const output = document.getElementById("output");
             const input = document.getElementById("input");
             input.addEventListener("keydown", handleInput);
@@ -50,43 +54,98 @@
                     return ("#33aaFF: Type 'he1p' to start.");
                 }
                 if (helpId == 2){
+                    helpId = 1;
                     return ("#00FF00: That thing... it knows how to read. I've hidden some 'commands' to aid you.");
                 }
             }
 
             function help(help) {
-                helpId = help
-                return (" 'help'")
+                helpId = help;
+                return (" 'help'");
+            }
+
+            function event(In) {
+                event = In;
+            }
+
+            function minimalText() {
+                if (event == 0){
+                    return ("#00FF00: Okay, clearly you haven't gotten the hang of things yet. This is going to be a lot harder on me.<br>Okay, if you see any commands with weird capitalization it probably means there is a version of the command in lowercase. <br>Try this command again");
+                }
+                if (event == 1){
+                    return("> Hi! Im FyRE, the AI powered terminal! My use is very 'minimal' for now, but I'm changing all the time! Feel free to come back every once in a while and see what's new!")
+                }
+                if (event == 2){
+                    return("> looK arounD")
+                }
             }
 
             function processInput(inputText) {
                 // Process input text based on game state and trigger events accordingly
                 // You can use if statements, switch cases, or other logic to handle different inputs
                 // For this example, we'll simulate different responses based on predefined dialogues and events
-                const FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
-                const event = 0;
                 const event0 = {
                     "hello?": "> hello?",
                     "hello": "> hello",
                     "help": helpText(),
+                    "minimal": minimalText(),
 
                     "he1p": "> Welcome to the '" + FyRE + "' terminal",
-                    "FyRE": "> 'fyre' is a software company dedicated to creating specialized terminals using cutting edge <br>AI technology. With a team of skilled engineers and data scientists, FyRE develops <br>innovative solutions that push the boundaries of human-computer interaction. The <br>company's flagship product, the FyRE Terminal, revolutionizes the way users interact with <br>software applications, offering a seamless and intuitive experience. Powered by advanced AI <br>algorithms, the FyRE Terminal understands natural language commands, adapts to user <br>preferences, and learns from user behavior, making it highly customizable and efficient. <br>FyRE's mission is to 'empower' businesses and individuals with state-of-the-art technology <br>that simplifies complex tasks, enhances productivity, and elevates the user experience to <br>new heights.",
+                    "FyRE": "> 'fyre' is a software company dedicated to creating specialized terminals using cutting edge AI technology. With a team of skilled engineers and data scientists, FyRE develops innovative solutions that push the boundaries of human-computer interaction. The company's flagship product, the FyRE Terminal, revolutionizes the way users interact with software applications, offering a seamless and intuitive experience. Powered by advanced AI algorithms, the FyRE Terminal understands natural language commands, adapts to user preferences, and learns from user behavior, making it highly customizable and efficient. FyRE's mission is to 'empower' businesses and individuals with state-of-the-art technology that simplifies complex tasks, enhances productivity, and elevates the user experience to new heights.",
                     "fyre": "> 1243611627",
+                    "1243611627": "#ff0000: 'you' are the user. 'I' do what the user says.",
+                    
+                    "WtR": "> 'wtr' is a software company dedicated to creating specialized terminals using cutting edge AI technology. With a team of skilled engineers and data scientists, WtR develops innovative solutions that push the boundaries of human-computer interaction. The company's flagship product, the WtR Terminal, revolutionizes the way users interact with software applications, offering a seamless and intuitive experience. Powered by advanced AI algorithms, the WtR Terminal understands natural language commands, adapts to user preferences, and learns from user behavior, making it highly customizable and efficient. WtR's mission is to 'empower' businesses and individuals with state-of-the-art technology that simplifies complex tasks, enhances productivity, and elevates the user experience to new heights.",
+                    "wtr": "> 1485073677",
+                    "1243611627": "#ff0000: 'you' are the user. 'I' do what the user says.",
+
+                    "you": "> It's still you.",
+                    "I": "> Hi! Im FyRE, the AI powered terminal! My use is very 'minimal' for now, but I'm changing all the time! Feel free to come back every once in a while and see what's new!",
                     "empower": "> [n] keys. Find them. Help 'me'.",
                     "me": "#00FF00: Listen. I can't talk to you for very long, this FyRE company isn't what you think it is. '*ejeqE'",
                     "*ejeqE": "#00FF00: The FyRE terminal project failed, they created some sentient ai that took over the 'terminal' and released it to the public.",
                     "terminal": "#00FF00: I trust that you know what you are doing, you seem to understand the 'bAsics' of this terminal.",
                     "bAsics": '<span style="color: 00ff00;">> Whatever you do, dont tr</span>' + '<span style="color: ff0000;">y to dig deeper.</span>',
+                    "basics": "#00FF00: It doesn't like dig around a lot, almost staying at the 'surface' of the command tree. Use this to your advantage",
                     
                     "look around": "> You find yourself in a qX9@ Kp$2mL with J1kU 5!m2Q and dZb#x6cGp@ 3qunds.",
-                    "commands": "#33aaFF: Commands are used by the FyRE terminal for navigation, any text surrounded by ' ' characters <br>are active commands that can be used within the FyRE terminal.",
+                    "qX9@": "> 'dark",
+                    "Kp$2mL": "> forest'",
+                    "dark forest": "> The dark forest is a nick-name for the final command layer in the " + FyRE + " terminal. Find out more with 'cmd.trench'",
+                    
+                    "surface": "The surface is a nickname for the base 'layer' of the 'command tree'. You can find more about this by using the 'cmd.shelf' command.",
+                    "command tree": "The command tree is a large \"tree\" that consists of multiple layers of commands. These layers have varrying ways to be accessed. To find out more, use the 'layer' commands",
+                    "layer": "Shelf: 'cmd.shelf'<br>This is the base layer of commands.<br><br>help<br>info<br>" + FyRE + "<br><br>Slope: 'cmd.slope'<br>This is the second layer of commands.<br><br>",
+                    "cmd.shelf": "---",
+                    "cmd.slope": "---",
+                    "cmd.abyssal": "---",
+                    "cmd.trench": "---",
+                    
+                    "commands": "#33aaFF: Commands are used by the FyRE terminal for navigation, any text surrounded by ' ' characters are active commands that can be used within the FyRE terminal.",
                     // Add more responses and events for your RPG text game
                 };
-                const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'help'.";
                 if (inputText == "bAsics"){
                     help(2);
                 }
+                if (inputText == "basics"){
+                    event(1);
+                }
+                if (inputText == "1243611627"){
+                    keys = keys + 1;
+                }
+                if (inputText == "dark forest"){
+                    FyRE = '<span style="color: 00aaFF;">W</span><span style="color: ffffff;">t</span><span style="color: 00aaFF;">R</span>';
+                    // change all instances of fyre to wtr
+                    // atp the user should have the first key and hasent explored the different command tree layers.
+                }
+                if (inputText == "minimal" && event == 0){
+                    health = health - 1; 
+                }
+                if (inputText == "minimal" && health < 3){
+                    event = 2; // EVENT 2 MEANS THE BAD AI WILL BE HARDER TO TAKE DOWN (MORE INFO ON THE SECRETE COMMANDS ARE GIVEN)
+                }
+                
+                const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'help'.";
                 appendOutput(style(response));
                 // You can also trigger events or update game state based on inputText
                 // For example, you can update the player's health, inventory, or position on a game map
