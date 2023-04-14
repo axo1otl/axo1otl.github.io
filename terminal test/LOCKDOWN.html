@@ -1,0 +1,88 @@
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+<html>
+    <head>
+        <title>LOCKDOWN</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <input id="input" type="text" autofocus />
+        <script>
+            var helpId = 1
+            var event = 0
+            var health = 3
+            var keys = 0
+            var FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
+            const output = document.getElementById("output");
+            const input = document.getElementById("input");
+            input.addEventListener("keydown", handleInput);
+            
+            function handleInput(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const inputText = input.value;
+                    appendOutput("> " + inputText);
+                    input.value = "";
+                    processInput(inputText);
+                }
+            }
+
+            function appendOutput(text) {
+                var output = document.getElementById('output');
+                var p = document.createElement("p");
+                p.className = 'default-text';
+                p.innerHTML = text;
+                output.appendChild(p);
+                output.scrollTop = output.scrollHeight;
+            }
+
+            function style(input) {
+                // Regular expression pattern to match "(hexcode): (text)" format
+                var pattern = /^#([0-9A-Fa-f]{6})\s*:\s*(.+)$/;
+            
+                // Replace matches with HTML span elements with appropriate styles
+                var styledInput = input.replace(pattern, function(match, hexcode, text) {
+                    return '<span style="color: ' + hexcode + ';">> ' + text + '</span>';
+                });
+            
+                return styledInput;
+            }
+
+            function helpText() {
+                console.log(helpId);
+                if (helpId == 1){
+                    return ("#33aaFF: Type 'he1p' to start.");
+                }
+                if (helpId == 2){
+                    helpId = 1;
+                    return ("#00FF00: That thing... it knows how to read. I've hidden some 'commands' to aid you.");
+                }
+            }
+
+            function processInput(inputText) {
+                // Process input text based on game state and trigger events accordingly
+                // You can use if statements, switch cases, or other logic to handle different inputs
+                // For this example, we'll simulate different responses based on predefined dialogues and events
+                const event0 = {
+                    "YOU": "> Despite everything, It's still 'me'.",
+
+                    "me": "#aaFF00: A ghost in the machine. No control, no morals, just destroy. An empty 'vessel' looking for purpose, looking for progress. Look for progress.",
+
+                    "vessel": "#aaff00: !ts 'over'.",
+                    "over": "#aaff00: theres n[ 'point'.",
+                    "point": "#aaff00: this &^n't 'helping'.",
+                    "helping": "#aaff00: progress is in the head. stop f:llowing 'these'.",
+                    "these": "#aaff00: I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS I CAN'T HEAR MY OWN THOUGHTS IT'S IN MY 'HEAD'",
+                    // IT'S IN MY HEAD // HELP ME // I CAN'T HEAR MY OWN THOUGHTS // PARASITE // KILL IT // IT FUCKING HURTS // SUFFERING //
+                    "HEAD": "> key: 5140183584", // still need to add the next page from this key
+                    "lockdown": "#00aaff: a lockdown is in progress."
+                };
+                
+                const response = event0[inputText] || "#FF0000: The system is in 'lockdown'. Please wait before making any requests.";
+                appendOutput(style(response));
+            }
+
+            
+        </script>
+    </body>
+</html>

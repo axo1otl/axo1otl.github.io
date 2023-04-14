@@ -19,7 +19,7 @@ body {
 }
 
 #output {
-    width: 50%;
+    width: 90%;
     height: calc(100% - 100px);
     padding: 10px;
     overflow-y: auto;
@@ -34,15 +34,15 @@ body {
     font-size: 20px;
     font-weight: bold;
 
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
     padding: 10px;
-    border: 3px solid #fff8;
+    border: 1px solid #fff;
     border-radius: 10px;
 
     position: fixed;
     bottom: 10px;
     text-shadow: 0px 0px 20px;
-    box-shadow: inset 0px 0px 20px #fff5;
+    box-shadow: 0px 0px 20px #fff8;
     /*
     box-shadow: 0px 0px 20px #fff5;
     */
