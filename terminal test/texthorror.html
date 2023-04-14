@@ -1,0 +1,100 @@
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+<html>
+    <head>
+        <title>Terminal</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <input id="input" type="text" autofocus />
+        <script>
+            var helpId = 1
+            const output = document.getElementById("output");
+            const input = document.getElementById("input");
+            input.addEventListener("keydown", handleInput);
+            
+            function handleInput(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const inputText = input.value;
+                    appendOutput("> " + inputText);
+                    input.value = "";
+                    processInput(inputText);
+                }
+            }
+
+            function appendOutput(text) {
+                var output = document.getElementById('output');
+                var p = document.createElement("p");
+                p.className = 'default-text';
+                p.innerHTML = text;
+                output.appendChild(p);
+                output.scrollTop = output.scrollHeight;
+            }
+
+            function style(input) {
+                // Regular expression pattern to match "(hexcode): (text)" format
+                var pattern = /^#([0-9A-Fa-f]{6})\s*:\s*(.+)$/;
+            
+                // Replace matches with HTML span elements with appropriate styles
+                var styledInput = input.replace(pattern, function(match, hexcode, text) {
+                    return '<span style="color: ' + hexcode + ';">> ' + text + '</span>';
+                });
+            
+                return styledInput;
+            }
+
+            function helpText() {
+                console.log(helpId);
+                if (helpId == 1){
+                    return ("#33aaFF: Type 'he1p' to start.");
+                }
+                if (helpId == 2){
+                    return ("#00FF00: That thing... it knows how to read. I've hidden some 'commands' to aid you.");
+                }
+            }
+
+            function help(help) {
+                helpId = help
+                return (" 'help'")
+            }
+
+            function processInput(inputText) {
+                // Process input text based on game state and trigger events accordingly
+                // You can use if statements, switch cases, or other logic to handle different inputs
+                // For this example, we'll simulate different responses based on predefined dialogues and events
+                const FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
+                const event = 0;
+                const event0 = {
+                    "hello?": "> hello?",
+                    "hello": "> hello",
+                    "help": helpText(),
+
+                    "he1p": "> Welcome to the '" + FyRE + "' terminal",
+                    "FyRE": "> 'fyre' is a software company dedicated to creating specialized terminals using cutting edge <br>AI technology. With a team of skilled engineers and data scientists, FyRE develops <br>innovative solutions that push the boundaries of human-computer interaction. The <br>company's flagship product, the FyRE Terminal, revolutionizes the way users interact with <br>software applications, offering a seamless and intuitive experience. Powered by advanced AI <br>algorithms, the FyRE Terminal understands natural language commands, adapts to user <br>preferences, and learns from user behavior, making it highly customizable and efficient. <br>FyRE's mission is to 'empower' businesses and individuals with state-of-the-art technology <br>that simplifies complex tasks, enhances productivity, and elevates the user experience to <br>new heights.",
+                    "fyre": "> 1243611627",
+                    "empower": "> [n] keys. Find them. Help 'me'.",
+                    "me": "#00FF00: Listen. I can't talk to you for very long, this FyRE company isn't what you think it is. '*ejeqE'",
+                    "*ejeqE": "#00FF00: The FyRE terminal project failed, they created some sentient ai that took over the 'terminal' and released it to the public.",
+                    "terminal": "#00FF00: I trust that you know what you are doing, you seem to understand the 'bAsics' of this terminal.",
+                    "bAsics": '<span style="color: 00ff00;">> Whatever you do, dont tr</span>' + '<span style="color: ff0000;">y to dig deeper.</span>',
+                    
+                    "look around": "> You find yourself in a qX9@ Kp$2mL with J1kU 5!m2Q and dZb#x6cGp@ 3qunds.",
+                    "commands": "#33aaFF: Commands are used by the FyRE terminal for navigation, any text surrounded by ' ' characters <br>are active commands that can be used within the FyRE terminal.",
+                    // Add more responses and events for your RPG text game
+                };
+                const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'help'.";
+                if (inputText == "bAsics"){
+                    help(2);
+                }
+                appendOutput(style(response));
+                // You can also trigger events or update game state based on inputText
+                // For example, you can update the player's health, inventory, or position on a game map
+                // You can also trigger events, such as encountering enemies, finding items, or reaching new locations
+                // You can use additional functions or objects to manage game state and events, depending on the complexity of your game
+            }
+
+            
+        </script>
+    </body>
+</html>

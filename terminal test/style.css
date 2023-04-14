@@ -1,0 +1,48 @@
+html{
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: consolas;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: consolas;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+#output {
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 10px;
+    overflow-y: auto;
+    text-shadow: 0px 0px 20px;
+    position: fixed;
+    top: 0px;
+}
+#input {
+    background-color: #0004;
+    color: #fff;
+    font-family: consolas;
+    font-size: 20px;
+    font-weight: bold;
+
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 5px solid #fff8;
+    border-radius: 10px;
+
+    position: fixed;
+    bottom: 10px;
+    text-shadow: 0px 0px 20px;
+}
+#input:focus {
+    outline: none;
+}
