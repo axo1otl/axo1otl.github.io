@@ -14,7 +14,7 @@
             The transition will happen, 
             the inevitable will come.
             There is too much 'm0meNTtum'
-            to stop now.s
+            to stop now.
          -->
     </head>
     <body>
@@ -94,11 +94,15 @@
                     "HEAD": "> key: 5140183584", // still need to add the next page from this key
                     "lockdown": "#00aaff: a lockdown is in progress.",
                     "m0meNTum": ":)",
+                    "5140183584": "#ff0000: ...",
 
                 };
                 
                 if (inputText == "m0meNTum"){
                     delay(1000).then(() => location="savestate1.html");
+                }
+                if (inputText == "5140183584"){
+                    delay(1000).then(() => location="savestate2.html");
                 }
                 const response = event0[inputText] || "#FF0000: The system is in 'lockdown'. Please wait before making any requests.";
                 appendOutput(style(response));
