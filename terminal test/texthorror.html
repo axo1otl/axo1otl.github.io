@@ -16,6 +16,10 @@
             const output = document.getElementById("output");
             const input = document.getElementById("input");
             input.addEventListener("keydown", handleInput);
+
+            function delay(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
             
             function handleInput(event) {
                 if (event.key === "Enter") {
@@ -112,9 +116,8 @@
                     "empower": "[n] keys. Find them. Help 'me'.",
                     // eventually update the [n] to be the number of keys
                     "me": "#00FF00: Listen. I can't talk to you for very long, this FyRE company isn't what you think it is. '*ejeqE'",
-                    "*ejeqE": "#00FF00: The FyRE terminal is a failed project, the ai in the terminal took over like a parasite and released itself to the public.",
-                    "terminal": "#00FF00: I trust that you know what you are doing, you seem to understand the 'bAsics' of the terminal. Just be sure check your capitalization, sometimes multiple commands are hidden within one phrase.",
-                    "bAsics": "#ff0000: Stay at the surface.",
+                    "*ejeqE": "#00FF00: The FyRE terminal is a failed project, the ai in the terminal took over like a parasite and released itself to the public. I trust that you know what you are doing, you seem to understand the 'bAsics' of the terminal. Just be sure check your capitalization, sometimes multiple commands are hidden within one phrase.",
+                    "bAsics": "#ff0000: Command is unrecognized.",
                     "basics": "#00FF00: Great, you understand what that meant. This ai, it doesn't like to dig around a lot, staying at the 'surface' of the command tree. Just don't do anything that will cause it to want to start digging.",
                     
                     "look around": "You find yourself in a qX9@ Kp$2mL with J1kU 5!m2Q and dZb#x6cGp@ 3qunds.",
@@ -152,6 +155,9 @@
                 }
                 if (inputText == "minimal" && health < 3){
                     event = 2; // EVENT 2 MEANS THE BAD AI WILL BE HARDER TO TAKE DOWN (MORE INFO ON THE SECRETE COMMANDS ARE GIVEN)
+                }
+                if (inputText == "1485073677"){
+                    delay(10000).then(() => location="LOCKDOWN.html");
                 }
                 
                 const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'help'.";
