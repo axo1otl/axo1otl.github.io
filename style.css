@@ -6,6 +6,10 @@ None
     --bgColor: #000 ;
 }
 
+.electrical-box{
+    transform: translate(3ft);
+}
+
 html{
     /*font-family: 'DM Sans', sans-serif;*/
     font-family: consolas;
