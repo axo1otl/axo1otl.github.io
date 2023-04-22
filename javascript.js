@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         dotColor: '#ffff',
         lineColor: '#fffa'
     });
-    var intro = document.getElementById('intro');
-    intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 
 
@@ -377,7 +375,7 @@ window[pluginName].defaults = {
     maxSpeedY: 0.9,
     directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
     directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
-    density: 250000, // How many particles will be generated: one particle every n pixels // 350000
+    density: 350000 * (3840/window.innerWidth), // How many particles will be generated: one particle every n pixels // 350000
     dotColor: '#666666',
     lineColor: '#666666',
     particleRadius: 0, // Dot size
