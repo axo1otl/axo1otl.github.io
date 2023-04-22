@@ -4,6 +4,7 @@ None
 */
 :root{
     --bgColor: #000 ;
+    --window: 100vw;
 }
 
 .electrical-box{
@@ -429,170 +430,73 @@ h3:hover{
     transition: all 0.5s ease;
 }
 #sc{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #ffbe00;
     color: #ffbe00;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
 #sc:hover{
-    
     background-color: #ffbe00;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
+
 #git{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #0d5;
     color: #0d5;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
 #git:hover{
-    
     background-color: #0d5;
     color: #fff;
-
-    margin-left: 1000px;
-    
-    transition: all 120s ease;
+    transition: all 0.5s ease;
 }
 #twt{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #1d9bf0;
     color: #1d9bf0;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
 #twt:hover{
-    
     background-color: #1d9bf0;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
 #ttv{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #bb44ff;
     color: #bb44ff;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-#ttv:hover{
-    
+#ttv:hover{ 
     background-color: #aa00ff;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
 #dc{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #6871d6;
     color: #6871d6;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
 #dc:hover{
-    
     background-color: #6871d6;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
 #ex{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
     border: 1px solid #85939e;
     color: #85939e;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
 #ex:hover{
-    
     background-color: #85939e;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 /*updates end*/
