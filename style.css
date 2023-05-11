@@ -4,6 +4,11 @@ None
 */
 :root{
     --bgColor: #000 ;
+    --window: 100vw;
+}
+
+.electrical-box{
+    transform: translate(3ft);
 }
 
 html{
@@ -353,7 +358,7 @@ h3:hover{
     margin-top: 10px;
     padding: 10px;
     border-radius: 2px;
-
+    
     color: #fff5;
     font-size: 75%;
 }
@@ -363,7 +368,7 @@ h3:hover{
     margin-bottom: 10px;
     border-radius: 10px;
 }
-.link_ng{
+.link{
     display: flex;
     margin-left: 0px;
     margin-right: 5px;
@@ -375,213 +380,123 @@ h3:hover{
     padding-top: 1px;
     padding-bottom: 1px;
 
-    border: 1px solid #ff8819;
-    color: #ff8819;
     text-decoration: none;
 
     border-radius: 2px;
     font-weight: bold;
-
+}
+#ap{
+    border: 1px solid #ff00aa;
+    color: #ff00aa;
+    text-decoration: none;
     transition: all 0.5s ease;
 }
-.link_ng:hover{
-    background-color: #ff8819;
+#ap:hover{
+    background-color: #ff00aa;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
-.link_yt{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#yt{
     border: 1px solid #da313f;
     color: #da313f;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_yt:hover{
-    
+#yt:hover{
     background-color: #da313f;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
-.link_sc{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#am{
+    border: 1px solid #00ccff;
+    color: #00ccff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+#am:hover{
+    background-color: #00ccff;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+#ng{
+    border: 1px solid #ff8819;
+    color: #ff8819;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+#ng:hover{
+    background-color: #ff8819;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+#sc{
     border: 1px solid #ffbe00;
     color: #ffbe00;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_sc:hover{
-    
+#sc:hover{
     background-color: #ffbe00;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
-.link_git{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
 
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#git{
     border: 1px solid #0d5;
     color: #0d5;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_git:hover{
-    
+#git:hover{
     background-color: #0d5;
     color: #fff;
-
-    margin-left: 1000px;
-    
-    transition: all 120s ease;
+    transition: all 0.5s ease;
 }
-.link_twt{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#twt{
     border: 1px solid #1d9bf0;
     color: #1d9bf0;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_twt:hover{
-    
+#twt:hover{
     background-color: #1d9bf0;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
-.link_ttv{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#ttv{
     border: 1px solid #bb44ff;
     color: #bb44ff;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_ttv:hover{
-    
+#ttv:hover{ 
     background-color: #aa00ff;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
-.link_dc{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#dc{
     border: 1px solid #6871d6;
     color: #6871d6;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_dc:hover{
-    
+#dc:hover{
     background-color: #6871d6;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 
-.link_ex{
-    display: flex;
-    margin-left: 0px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    padding-top: 1px;
-    padding-bottom: 1px;
-
+#ex{
     border: 1px solid #85939e;
     color: #85939e;
     text-decoration: none;
-
-    border-radius: 2px;
-    font-weight: bold;
-
     transition: all 0.5s ease;
 }
-.link_ex:hover{
-    
+#ex:hover{
     background-color: #85939e;
     color: #fff;
-    
     transition: all 0.5s ease;
 }
 /*updates end*/

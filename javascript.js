@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         dotColor: '#ffff',
         lineColor: '#fffa'
     });
-    var intro = document.getElementById('intro');
-    intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 
 
@@ -68,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             styleCanvas();
             
             // Create particles
-            var numParticles = Math.round((canvas.width * canvas.height) / options.density);
+            var numParticles = options.density;
             for (var i = 0; i < numParticles; i++) {
                 var p = new Particle();
                 p.setStackPos(i);
@@ -147,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
             
             // Adjust particle density
-            var numParticles = Math.round((canvas.width * canvas.height) / options.density);
+            var numParticles = options.density;
             if (numParticles > particles.length) {
                 while (numParticles > particles.length) {
                     var p = new Particle();
@@ -377,7 +375,7 @@ window[pluginName].defaults = {
     maxSpeedY: 0.9,
     directionX: 'center', // 'center', 'left' or 'right'. 'center' = dots bounce off edges
     directionY: 'center', // 'center', 'up' or 'down'. 'center' = dots bounce off edges
-    density: 250000, // How many particles will be generated: one particle every n pixels // 350000
+    density: 4, // How many particles will be generated
     dotColor: '#666666',
     lineColor: '#666666',
     particleRadius: 0, // Dot size
