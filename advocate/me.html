@@ -1,0 +1,126 @@
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+<html>
+    <head>
+        <title>Terminal</title>
+    </head>
+    <body>
+        <div id="output">
+            Welcome to 'me' <br><br>
+            This is an interactive story told through my inner monolouge. <br><br>
+            You will navigate through the story using words surrounded by ' '. <br><br>
+            These words are case sensitive so use lowercase only. <br><br>
+            Try it now with 'me' to start the story.
+        </div>
+        <input id="input" type="text" autofocus />
+        <script>
+            var helpId = 1
+            var event = 0
+            var health = 3
+            var keys = 0
+            var FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
+            const output = document.getElementById("output");
+            const input = document.getElementById("input");
+            input.addEventListener("keydown", handleInput);
+
+            function delay(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+            
+            function handleInput(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const inputText = input.value;
+                    appendOutput("> " + inputText);
+                    input.value = "";
+                    processInput(inputText);
+                }
+            }
+
+            function appendOutput(text) {
+                var output = document.getElementById('output');
+                var p = document.createElement("p");
+                p.className = 'default-text';
+                p.innerHTML = text;
+                output.appendChild(p);
+                output.scrollTop = output.scrollHeight;
+            }
+
+            function style(input) {
+                // Regular expression pattern to match "(hexcode): (text)" format
+                var pattern = /^#([0-9A-Fa-f]{6})\s*:\s*(.+)$/;
+            
+                // Replace matches with HTML span elements with appropriate styles
+                var styledInput = input.replace(pattern, function(match, hexcode, text) {
+                    return '<span style="color: ' + hexcode + ';">> ' + text + '</span>';
+                });
+            
+                return styledInput;
+            }
+
+
+            function processInput(inputText) {
+                // Process input text based on game state and trigger events accordingly
+                // You can use if statements, switch cases, or other logic to handle different inputs
+                // For this example, we'll simulate different responses based on predefined dialogues and events
+                const event0 = {
+
+                    "me": "#00ffaa: (05:45am) *The alarm clock rings*" + "<br>- 'get up'",
+                    "get up": "#aaaaaa: (05:46am) You got barely any sleep last night. Just 'hit snooze'.",
+                    "hit snooze": "#aaaaaa: (05:55am) The alarm clock is ringing, it hurts your ears. Get up and 'stay up'.",
+                    "stay up": "#aaaaaa: (06:02am) You didn't 'do your laundry' AGAIN.",
+                    "do your laundry": "#aaaaaa: (06:03am) It's way too late to do your laundry now. Just 'throw something on'.",
+                    
+                    "throw something on": "#aaaaaa: (06:05am) At least you have a different hoodie from yesterday... Head downstairs, dad is probably wondering where you are." + "<br>- 'go downstairs' | 'wait'",
+                        // SPLIT 1
+                        // no medicine access root (path 1)
+                        "go downstairs": "#aaaaaa: (06:07am) Yogi is meowing at you..." + "<br>- 'pet him' | 'meow back'",
+                            // SPLIT 2
+                            // caffinated (path 1.1)
+                            "pet him": "#aaaaaa: (06:07am) Give him head scratches and 'move on', you don't want to be late.",
+                            "move on": "",
+
+                            // uncaffinated (path 1.2)
+                            "meow back": "#00ffaa: (06:08am) *Yogi lies down and rolls onto your feet, you can feel him purring*" + "<br>- 'rub his tummy'",
+                            "rub his tummy": "#00ffaa: (06:09am)",
+                            "": "",
+                            "": "",
+                            "": "",
+                            "": "",
+                            "": "",
+                            "": "",
+                            "": "",
+                            "": "",
+
+                        // medicine root (path 2)
+                        "wait": "#00ffaa: (06:06am) *You wait a few seconds before realizing that you don't have your medicine.*" + "<br>- 'take medicine'",
+                        "take medicine": "#00aaff: (06:06am) *You grab the bottle from your desk and pull out a single white and teal pill.*" + "<br>- 'head downstairs'",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                        "": "",
+                    
+                    };
+
+                const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'me'.";
+                
+                if (inputText == "wait"){
+                    delay(5000).then(() => appendOutput(style(response)));
+                }
+                else{
+                    appendOutput(style(response));
+                }
+                
+            }
+
+            
+        </script>
+    </body>
+</html>

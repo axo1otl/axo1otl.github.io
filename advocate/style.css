@@ -1,0 +1,52 @@
+html{
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: consolas;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: consolas;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+#output {
+    width: 90%;
+    height: calc(100% - 100px);
+    padding: 10px;
+    overflow-y: auto;
+    text-shadow: 0px 0px 20px;
+    position: fixed;
+    top: 0px;
+}
+#input {
+    background-color: #0004;
+    color: #fff;
+    font-family: consolas;
+    font-size: 36px;
+    font-weight: bold;
+
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+
+    position: fixed;
+    bottom: 10px;
+    text-shadow: 0px 0px 20px;
+    box-shadow: 0px 0px 20px #fff8;
+    /*
+    box-shadow: 0px 0px 20px #fff5;
+    */
+}
+#input:focus {
+    outline: none;
+}
