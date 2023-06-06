@@ -1,6 +1,6 @@
 html{
     /*font-family: 'DM Sans', sans-serif;*/
-    font-family: consolas;
+    font-family: consolas, SF mono;
     scrollbar-width: none;
 }
 
@@ -11,7 +11,6 @@ html::-webkit-scrollbar{
 body {
     background-color: black;
     color: white;
-    font-family: consolas;
     font-size: 24px;
     font-weight: bold;
     margin: 0;
@@ -30,7 +29,6 @@ body {
 #input {
     background-color: #0004;
     color: #fff;
-    font-family: consolas;
     font-size: 36px;
     font-weight: bold;
 
