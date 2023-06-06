@@ -1,6 +1,6 @@
 html{
     /*font-family: 'DM Sans', sans-serif;*/
-    font-family: consolas, SF mono;
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     scrollbar-width: none;
 }
 
