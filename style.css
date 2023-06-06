@@ -12,8 +12,7 @@ None
 }
 
 html{
-    /*font-family: 'DM Sans', sans-serif;*/
-    font-family: consolas;
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     -ms-overflow-style: none;
     scrollbar-width: none;
     transform: translateY(-100vh);
