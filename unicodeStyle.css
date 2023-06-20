@@ -137,11 +137,11 @@ button:hover{
     transition: 2s;
 
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
 
-    max-width: 70px;
+    max-width: 50px;
 }
 .grid-item:hover{
     border: 2px solid #fffa;
@@ -260,7 +260,7 @@ button:hover{
     background-color: #0000;
 }
 space{
-    margin-left: calc((1% + 10px + 20%) * 1.5);
+    margin-left: calc((1% + 10px + 20%) * 1.15);
 }
 
 colors{
