@@ -1,0 +1,13 @@
+2023-07-01 14.46.20
+
+Welcome to Axo-GPT!
+This python file include all the normal functionalities of the web version without any restrictions.
+The load times can get a bit long so be patient.
+/q: quit
+
+....................................................................
+User: 
+
+hello!
+....................................................................
+====================================================================

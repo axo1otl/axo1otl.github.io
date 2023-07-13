@@ -232,11 +232,53 @@ button:hover{
     /* FILTER / EFFECTS */
     transition: all 0.5s;
 }
+.inSearch{
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 50px #fff2;
+    border-radius: 5px;
+    border: 2px solid #fff3;
+    text-shadow: 0px 0px 2px;
+    
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 10px;
+    width: 20%;
+    
+    /* FONT */
+    font-family: consolas;
+    font-weight: normal; /* bold */
+    font-size: 32;
+    color: #fffa;
+
+    /* FILTER / EFFECTS */
+    transition: all 0.5s;
+}
 .pages{
     background-color: #fff1;
     box-shadow: inset 0px 0px 50px #fff2;
     border-radius: 5px;
     border: 2px solid #fff3;
+    text-shadow: 0px 0px 2px;
+
+    color: #fffa;
+    font-family: consolas;
+    font-weight: normal; /* bold */
+    font-size: 32;
+    
+    /* CONTAINER MANIPULATION */
+    margin: 1%;
+    padding: 10px;
+    width: 20%;
+    
+
+    /* FILTER / EFFECTS */
+    transition: all 0.5s;
+}
+.pages:hover{
+    background-color: #fff2;
+    box-shadow: inset 0px 0px 50px #fff3;
+    border-radius: 5px;
+    border: 2px solid #fff5;
     text-shadow: 0px 0px 2px;
 
     color: #fffa;
