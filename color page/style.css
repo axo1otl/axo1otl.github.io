@@ -38,7 +38,7 @@ html{
     padding-top: calc(var(--uiscale) * 16px);
     padding-bottom: calc(var(--uiscale) * 16px);
 
-    box-shadow: inset 0px 64px 0px 0px var(--bgcolor);
+    box-shadow: inset 0px 132px 0px 0px var(--bgcolor);
 
     background-color: #101014;
 
@@ -47,8 +47,13 @@ html{
 
 .toolui:hover {
     bottom: 0;
-    box-shadow: inset 0px 0px 0px 0px var(--bgcolor);
+    box-shadow: inset 0px 132px 0px 0px var(--bgcolor);
     transition:  0.5s ease;
+}
+
+.texthint{
+    text-align: center;
+    font-size: 36px;
 }
 
 .slidecontainer {
