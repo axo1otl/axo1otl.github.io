@@ -1,6 +1,5 @@
 html{
-    /*font-family: 'DM Sans', sans-serif;*/
-    font-family: consolas;
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     scrollbar-width: none;
 }
 
@@ -11,7 +10,7 @@ html::-webkit-scrollbar{
 body {
     background-color: black;
     color: white;
-    font-family: consolas;
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     font-size: 24px;
     font-weight: bold;
     margin: 0;
@@ -19,6 +18,7 @@ body {
 }
 
 #output {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     width: 90%;
     height: calc(100% - 100px);
     padding: 10px;
@@ -30,9 +30,9 @@ body {
 #input {
     background-color: #0004;
     color: #fff;
-    font-family: consolas;
     font-size: 36px;
     font-weight: bold;
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
 
     width: calc(100% - 20px);
     padding: 10px;
@@ -48,5 +48,6 @@ body {
     */
 }
 #input:focus {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace,'DejaVu Sans Mono', Menlo, Consolas, monospace;
     outline: none;
 }
