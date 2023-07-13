@@ -29,14 +29,16 @@ html{
 
 .toolui {
     position: absolute;
-    bottom: 0;
+    bottom: -350px;
     left: 0;
 
     max-width: 100vw;
     width: 100%;
 
-    padding-top: 1%;
-    padding-bottom: 10%;
+    padding-top: calc(var(--uiscale) * 16px);
+    padding-bottom: calc(var(--uiscale) * 16px);
+
+    box-shadow: inset 0px 64px 0px 0px var(--bgcolor);
 
     background-color: #101014;
 
@@ -45,13 +47,13 @@ html{
 
 .toolui:hover {
     bottom: 0;
-
+    box-shadow: inset 0px 0px 0px 0px var(--bgcolor);
     transition:  0.5s ease;
 }
 
 .slidecontainer {
     width: 90%;
-    margin: 5%;
+    margin: 40px;
 }
 
 /* The slider itself */
@@ -61,7 +63,7 @@ html{
     
     outline: none;
     
-    translate: calc(45vw - 50%);
+    translate: calc(48vw - calc(690px / 2));
 
     margin: calc(var(--uiscale) * 2px);
 
@@ -213,7 +215,7 @@ html{
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .savecontainer{
-    translate: calc(50vw - 50%);
+    translate: calc(50vw - calc(306px / 2));
 
     margin-left: calc(var(--uiscale) * 2px);
     margin-right: calc(var(--uiscale) * 2px);
