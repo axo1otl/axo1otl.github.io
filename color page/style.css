@@ -42,13 +42,13 @@ html{
 
     background-color: #101014;
 
-    transition:  0.5s ease;
+    transition: bottom 0.5s ease;
 }
 
 .toolui:hover {
     bottom: 0;
     box-shadow: inset 0px 132px 0px 0px var(--bgcolor);
-    transition:  0.5s ease;
+    transition: bottom 0.5s ease;
 }
 
 .texthint{
