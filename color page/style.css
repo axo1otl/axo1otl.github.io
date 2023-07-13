@@ -18,10 +18,12 @@
     --savec3: rgba(0,0,0,0);
     --savec4: rgba(0,0,0,0);
     --savec5: rgba(0,0,0,0);
+
+    --bgcolor: rgb(var(--rval),var(--gval),var(--bval));
 }
 
 html{
-    background-color: rgb(var(--rval),var(--gval),var(--bval));
+    background-color: var(--bgcolor);
     overflow-y: hidden;
 }
 
@@ -213,7 +215,8 @@ html{
 .savecontainer{
     translate: calc(50vw - 50%);
 
-    margin: calc(var(--uiscale) * 2px);
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
 
     width: fit-content;
 
@@ -224,14 +227,15 @@ html{
 .savetile{
     border: none;
 
-    margin: calc(var(--uiscale) * 2px);
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
 
     width: calc(var(--uiscale) * 25px);
     height: calc(var(--uiscale) * 25px); 
     
     background: var(--slidercolor); 
 
-    border-radius: 15%;
+    border-radius: 20% 20% 0% 0%;
 
     cursor: pointer;
 
@@ -261,4 +265,36 @@ html{
 
 #savet5{
     background: var(--savec5); 
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+.settile{
+    border: none;
+    
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
+    
+    width: calc(var(--uiscale) * 25px);
+    height: calc(var(--uiscale) * 12.5px); 
+    
+    background: var(--slidercolor); 
+    
+    border-radius: 0% 0% calc(var(--uiscale) * 5px) calc(var(--uiscale) * 5px);
+    
+    cursor: pointer;
+    
+    box-shadow: 0px 0px 0px calc(var(--uiscale) * 1px) var(--slidercolor);
+    
+    -webkit-transition: 0.25s ease; 
+    transition:  0.25s ease;
+}
+
+.setlable{
+    text-align: center;
+    font-size: calc(var(--uiscale) * 16px);
+
+    color: #fff1;
+
+    translate: 0px calc(var(--uiscale) * -3px);
 }

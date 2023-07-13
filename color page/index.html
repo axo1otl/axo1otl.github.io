@@ -21,11 +21,19 @@
         </div>
 
         <div class="savecontainer">
-            <input type="button" class="savetile" id="savet1" onmousedown="saveTile1()">
-            <input type="button" class="savetile" id="savet2" onmousedown="saveTile2()">
-            <input type="button" class="savetile" id="savet3" onmousedown="saveTile3()">
-            <input type="button" class="savetile" id="savet4" onmousedown="saveTile4()">
-            <input type="button" class="savetile" id="savet5" onmousedown="saveTile5()">
+            <input type="button" class="savetile" id="savet1" onmousedown="setTile1()">
+            <input type="button" class="savetile" id="savet2" onmousedown="setTile2()">
+            <input type="button" class="savetile" id="savet3" onmousedown="setTile3()">
+            <input type="button" class="savetile" id="savet4" onmousedown="setTile4()">
+            <input type="button" class="savetile" id="savet5" onmousedown="setTile5()">
+        </div>
+
+        <div class="savecontainer">
+            <button type="button" class="settile" id="set1" onmousedown="saveTile1()"><div class="setlable">+</div></button>
+            <button type="button" class="settile" id="set2" onmousedown="saveTile2()"><div class="setlable">+</div></button>
+            <button type="button" class="settile" id="set3" onmousedown="saveTile3()"><div class="setlable">+</div></button>
+            <button type="button" class="settile" id="set4" onmousedown="saveTile4()"><div class="setlable">+</div></button>
+            <button type="button" class="settile" id="set5" onmousedown="saveTile5()"><div class="setlable">+</div></button>
         </div>
 
 
@@ -40,22 +48,49 @@
         
         var open = document.getElementById('tab');
 
-
-
         root.style.setProperty('--rval', r.value);
         root.style.setProperty('--gval', g.value);
         root.style.setProperty('--bval', b.value);
 
         r.oninput = function() {
             root.style.setProperty('--rval', this.value);
+            root.style.setProperty('--bgcolor', 'rgba('+r.value+','+g.value+','+b.value+',255)');
         }
 
         green.oninput = function() {
             root.style.setProperty('--gval', this.value);
+            root.style.setProperty('--bgcolor', 'rgba('+r.value+','+g.value+','+b.value+',255)');
         }
 
         b.oninput = function() {
             root.style.setProperty('--bval', this.value);
+            root.style.setProperty('--bgcolor', 'rgba('+r.value+','+g.value+','+b.value+',255)');
+        }
+
+        function RGBAToHexA(rgba, forceRemoveAlpha = true) {
+            return "#" + rgba.replace(/^rgba?\(|\s+|\)$/g, '') // Get's rgba / rgb string values
+                .split(',') // splits them at ","
+                .filter((string, index) => !forceRemoveAlpha || index !== 3)
+                .map(string => parseFloat(string)) // Converts them to numbers
+                .map((number, index) => index === 3 ? Math.round(number * 255) : number) // Converts alpha to 255 number
+                .map(number => number.toString(16)) // Converts numbers to hex
+                .map(string => string.length === 1 ? "0" + string : string) // Adds 0 when length of one number is 1
+                .join("") // Puts the array to togehter to a string
+        }
+
+        function hextodec(hex){
+            return(parseInt(hex, 16));
+        }
+
+        function setrgbvals(hex){
+            r.value = hextodec(hex.substring(0,2));
+            g.value = hextodec(hex.substring(2,4));
+            b.value = hextodec(hex.substring(4,6));
+
+            console.log(hex)
+            console.log(r.value)
+            console.log(g.value)
+            console.log(b.value)
         }
 
         function setCookie(cname, cvalue, exdays) {
@@ -77,7 +112,7 @@
                     return c.substring(name.length, c.length);
                 }
             }
-            return "";
+            return ""; 
         }
 
         function checkCookie() {
@@ -125,5 +160,35 @@
         }
 
         checkCookie()
+
+        function setTile1(){
+            root.style.setProperty('--bgcolor', getComputedStyle(document.querySelector('#savet1')).backgroundColor);
+            var fullhex = RGBAToHexA(getComputedStyle(document.querySelector('#savet1')).backgroundColor).substring(1);
+            setrgbvals(fullhex);
+        }
+
+        function setTile2(){
+            root.style.setProperty('--bgcolor', getComputedStyle(document.querySelector('#savet2')).backgroundColor);
+            var fullhex = RGBAToHexA(getComputedStyle(document.querySelector('#savet2')).backgroundColor).substring(1);
+            setrgbvals(fullhex);
+        }
+
+        function setTile3(){
+            root.style.setProperty('--bgcolor', getComputedStyle(document.querySelector('#savet3')).backgroundColor);
+            var fullhex = RGBAToHexA(getComputedStyle(document.querySelector('#savet3')).backgroundColor).substring(1);
+            setrgbvals(fullhex);
+        }
+
+        function setTile4(){
+            root.style.setProperty('--bgcolor', getComputedStyle(document.querySelector('#savet4')).backgroundColor);
+            var fullhex = RGBAToHexA(getComputedStyle(document.querySelector('#savet4')).backgroundColor).substring(1);
+            setrgbvals(fullhex);
+        }
+
+        function setTile5(){
+            root.style.setProperty('--bgcolor', getComputedStyle(document.querySelector('#savet5')).backgroundColor);
+            var fullhex = RGBAToHexA(getComputedStyle(document.querySelector('#savet5')).backgroundColor).substring(1);
+            setrgbvals(fullhex);
+        }
     </script>
 </html>
