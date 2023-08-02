@@ -35,6 +35,7 @@
 
         <div class="page-container">
             <div class="toolbar">
+                <input  class="tool-tile" type="checkbox" id="edit-mode" oninput="editmode()">
                 <button class="tool-tile" style="font-weight: bold;">B</button>
                 <button class="tool-tile" style="font-style: italic;">I</button>
                 <button class="tool-tile" style="text-decoration: line-through;">S</button>
@@ -48,10 +49,9 @@
             <div class="notepad-container">
                 <input class="note-title" type="text" placeholder="Title">
                 <div class="line"></div>
-                <div class="grid">
-                    <textarea id="textbox" class="notepad" name="paragraph_text" cols="75" rows="1" autofocus="true" oninput="markdown()" contentEditable="true"></textarea>
-                    <div id="textout" class="htmlpad" value="out"></div>
-                </div>
+
+                <textarea id="textbox" class="notepad" name="paragraph_text" cols="75" rows="30" autofocus="true" oninput="markdown()" contentEditable="true"></textarea>
+                <div id="textout" class="htmlpad" value="out"></div>
             </div>
         </div>
         
@@ -100,7 +100,6 @@
             }
 
             function markdown(){
-                
                 const heading1regex = /^(#\s)(.*)$/gm;
                 const boldregex = /\*\*(.*?)\*\*/g;
                 const italicregex = /\*(.*?)\*/g;
@@ -115,6 +114,10 @@
 
                 textout.innerHTML = html;
                 console.log(html);
+            }
+
+            function editmode(){
+                 
             }
 
             checkCookie()

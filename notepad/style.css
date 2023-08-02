@@ -50,6 +50,17 @@ html::-webkit-scrollbar{
         calc(var(--tilesize) + 2px)
         calc(var(--tilesize) + 2px)
         calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
+        calc(var(--tilesize) + 2px)
     ;
     
     width: auto;
@@ -97,6 +108,16 @@ html::-webkit-scrollbar{
 }
 #uc-button{
     translate: 0px 1px;
+}
+.toolbar input{
+    min-height: 24px;
+    min-width:  24px;
+    height:     24px;
+    width:      24px;
+    max-height: 24px;
+    max-width:  24px;
+
+    translate: 10px 12px;
 }
 
 .notepad-container{
@@ -152,7 +173,6 @@ html::-webkit-scrollbar{
 .notepad:focus{
     outline: none;
 }
-
 .htmlpad{
     min-height: 50vh;
     background: #0000;
@@ -165,6 +185,19 @@ html::-webkit-scrollbar{
     font-weight: 100;
     font-size: 16px;
     padding: 10px;
+}
+
+#edit-mode:checked ~ .notepad-container #textbox{
+    display: none;
+}
+#edit-mode:checked ~ .notepad-container #textout{
+    display: inherit;
+}
+#edit-mode:not(:checked) ~ .notepad-container #textbox{
+    display: inherit;
+}
+#edit-mode:not(:checked) ~ .notepad-container #textout{
+    display: none;
 }
 
 .image{
