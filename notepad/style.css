@@ -187,6 +187,10 @@ html::-webkit-scrollbar{
     padding: 10px;
 }
 
+#edit-mode:checked + .notepad-container .notepad{
+    display: none;
+}
+/*
 #edit-mode:checked ~ .notepad-container #textbox{
     display: none;
 }
@@ -199,6 +203,7 @@ html::-webkit-scrollbar{
 #edit-mode:not(:checked) ~ .notepad-container #textout{
     display: none;
 }
+*/
 
 .image{
     z-index: 1;
