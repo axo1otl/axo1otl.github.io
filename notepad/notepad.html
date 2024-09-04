@@ -17,25 +17,29 @@
             <link rel="icon" type="image/png" href="images/face.ico"/>
         </head>
 
-        <div class="image" id="mask">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 98 122.5" style="enable-background:new 0 0 98 98;" xml:space="preserve">
-                    <style type="text/css">
-                        .st0{
-                            fill-rule:evenodd;
-                            clip-rule:evenodd;
-                            fill: #0008;
-                        }
-                    </style>
-                    <path class="st0" d="M71.392,21.801c2.933,0,5.318,2.386,5.318,5.318c0,2.932-2.386,5.318-5.318,5.318  c-2.933,0-5.318-2.386-5.318-5.318C66.074,24.187,68.459,21.801,71.392,21.801L71.392,21.801z M71.392,38.183  c6.101,0,11.065-4.963,11.065-11.065c0-6.101-4.963-11.065-11.065-11.065c-6.101,0-11.064,4.963-11.064,11.065  C60.328,33.22,65.291,38.183,71.392,38.183L71.392,38.183z M84.099,89.219H13.901c-2.823,0-5.121-2.297-5.121-5.121V59.471  l25.149-25.149c1.09-1.09,2.547-1.691,4.105-1.691c1.558,0,3.015,0.601,4.105,1.691L89.218,81.4v2.697  C89.219,86.923,86.922,89.219,84.099,89.219L84.099,89.219z M13.901,8.781c-2.824,0-5.121,2.296-5.121,5.121v37.445l21.087-21.088  c2.174-2.175,5.076-3.372,8.168-3.372c3.092,0,5.992,1.197,8.168,3.372L89.22,73.277V13.902c0-2.824-2.298-5.121-5.121-5.121H13.901  z"/>
-                </svg>                
+        
+        <header>
+            <div class="image" id="mask">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 98 122.5" style="enable-background:new 0 0 98 98;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{
+                                fill-rule:evenodd;
+                                clip-rule:evenodd;
+                                fill: #0008;
+                            }
+                        </style>
+                        <path class="st0" d="M71.392,21.801c2.933,0,5.318,2.386,5.318,5.318c0,2.932-2.386,5.318-5.318,5.318  c-2.933,0-5.318-2.386-5.318-5.318C66.074,24.187,68.459,21.801,71.392,21.801L71.392,21.801z M71.392,38.183  c6.101,0,11.065-4.963,11.065-11.065c0-6.101-4.963-11.065-11.065-11.065c-6.101,0-11.064,4.963-11.064,11.065  C60.328,33.22,65.291,38.183,71.392,38.183L71.392,38.183z M84.099,89.219H13.901c-2.823,0-5.121-2.297-5.121-5.121V59.471  l25.149-25.149c1.09-1.09,2.547-1.691,4.105-1.691c1.558,0,3.015,0.601,4.105,1.691L89.218,81.4v2.697  C89.219,86.923,86.922,89.219,84.099,89.219L84.099,89.219z M13.901,8.781c-2.824,0-5.121,2.296-5.121,5.121v37.445l21.087-21.088  c2.174-2.175,5.076-3.372,8.168-3.372c3.092,0,5.992,1.197,8.168,3.372L89.22,73.277V13.902c0-2.824-2.298-5.121-5.121-5.121H13.901  z"/>
+                    </svg>                
+                </div>
+                <input id="img" type="text" placeholder="Url: " oninput="setCustomBg()">
             </div>
-            <input id="img" type="text" placeholder="Url: " oninput="setCustomBg()">
-        </div>
+        </header>
 
         <div class="page-container">
             <div class="toolbar">
-                <input  class="tool-tile" type="checkbox" id="edit-mode" oninput="editmode()">
+                <input  class="tool-tile" type="checkbox" id="edit-mode" oninput="editmode()" checked="false">
+                <button class="tool-tile">💾</button>
                 <button class="tool-tile" style="font-weight: bold;">B</button>
                 <button class="tool-tile" style="font-style: italic;">I</button>
                 <button class="tool-tile" style="text-decoration: line-through;">S</button>
@@ -43,13 +47,15 @@
                 <button class="tool-tile" style="text-decoration: overline;">O</button>
                 <button class="tool-tile">▨</button>
                 <button class="tool-tile">{}</button>
-                <button class="tool-tile">💾</button>
-            </div>
 
+                <button class="text-tile">Made by <a href="">ax1tl</a></button>
+            </div>
+            
             <div class="notepad-container">
+                <input  class="hidden" type="checkbox" id="edit-bridge" checked="false">
                 <input class="note-title" type="text" placeholder="Title">
                 <div class="line"></div>
-
+                
                 <textarea id="textbox" class="notepad" name="paragraph_text" cols="75" rows="30" autofocus="true" oninput="markdown()" contentEditable="true"></textarea>
                 <div id="textout" class="htmlpad" value="out"></div>
             </div>
@@ -60,7 +66,7 @@
             var img = document.getElementById('img');
             var textbox = document.getElementById('textbox');
             var textout = document.getElementById('textout');
-
+            
             console.log(img.value);
 
             function setCookie(cname, cvalue, exdays) {
@@ -115,12 +121,22 @@
                 textout.innerHTML = html;
                 console.log(html);
             }
-
+            
             function editmode(){
-                 
+                let editon = document.getElementById('edit-mode').checked;
+                const editbridge = document.getElementById('edit-bridge');
+
+                editbridge.checked = editon;
+                console.log(editon);
             }
 
             checkCookie()
+            markdown()
         </script>
+        <footer>
+            <div class="warning">
+                WARNING: THIS WEBSITE USES COOKIES TO SAVE YOUR NOTES
+            </div>
+        </footer>
     </body>
 </html>
