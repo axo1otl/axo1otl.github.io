@@ -122,7 +122,7 @@ html::-webkit-scrollbar{
 
 .notepad-container{
     width: 0%;
-    min-width: fit-content;
+    min-width: calc(100% - 21px);
     max-width: 100vw;
     padding: 10px;
     margin: auto;
@@ -185,13 +185,9 @@ html::-webkit-scrollbar{
     font-weight: 100;
     font-size: 16px;
     padding: 10px;
-}
+} 
 
-#edit-mode:checked + .notepad-container .notepad{
-    display: none;
-}
-/*
-#edit-mode:checked ~ .notepad-container #textbox{
+.page-container #edit-mode:checked ~ *#textbox{
     display: none;
 }
 #edit-mode:checked ~ .notepad-container #textout{
@@ -203,7 +199,7 @@ html::-webkit-scrollbar{
 #edit-mode:not(:checked) ~ .notepad-container #textout{
     display: none;
 }
-*/
+
 
 .image{
     z-index: 1;
