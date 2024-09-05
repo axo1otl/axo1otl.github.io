@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=VT323&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/gh/jitbit/HtmlSanitizer@master/HtmlSanitizer.js"></script>
 
 <meta charset="UTF-8">
 
@@ -126,7 +127,7 @@
                 const spoil = code.replace(spoilregex, '<spoil>$1</spoil>');
 
 
-                const html = spoil;
+                const html = HtmlSanitizer.SanitizeHtml(spoil);
 
                 textout.innerHTML = html;
                 console.log(html);
