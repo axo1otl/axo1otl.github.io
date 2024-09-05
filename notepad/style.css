@@ -343,6 +343,43 @@ a{
     transition: 0.5s;
 }
 
+#cookies{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color:#0004;
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0px 0px 100px #0001, inset 0px 0px 10px #0005;
+
+    border: #0007;
+    border-radius: 15px 15px 15px 15px;
+
+    color: #fff8;
+    font-family: var(--font);
+    font-weight: 100;
+    font-size: 16px;
+
+    transition: 0.5s;
+}
+#cookies:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color:#fff4;
+    backdrop-filter: blur(15px);
+    box-shadow: inset 0px 0px 100px #fff1, inset 0px 0px 10px #fff5;
+
+    border: #fff7;
+    border-radius: 15px 15px 15px 15px;
+
+    color: #0008;
+    font-family: var(--font);
+    font-weight: 100;
+    font-size: 16px;
+
+    transition: 0.5s;
+}
+
 footer{
     margin: auto;
 

@@ -130,12 +130,17 @@
                 console.log(editon);
             }
 
+            function hide(elementIdIn){
+                document.getElementById(elementIdIn).style.setProperty('display', 'none');
+            }
+
             checkCookie()
             markdown()
         </script>
         <footer>
-            <div class="warning">
+            <div class="warning" id="cookie">
                 WARNING: THIS WEBSITE USES COOKIES TO SAVE YOUR NOTES
+                <input type="button" id="cookies" value="nom..." onclick="hide('cookie')">
             </div>
         </footer>
     </body>
