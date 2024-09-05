@@ -96,6 +96,9 @@
                 if (cook != "") {
                     root.style.setProperty('--savec1', cook);
                 }
+                if (getCookie("cookie_accept") != ""){
+                    hide('cookie');
+                }
             }
 
             function setCustomBg(){
@@ -109,14 +112,21 @@
                 const heading1regex = /^(#\s)(.*)$/gm;
                 const boldregex = /\*\*(.*?)\*\*/g;
                 const italicregex = /\*(.*?)\*/g;
+                const bolditalicregex = /\*\*\*(.*?)\*\*\*/g;
                 const brregex = /\n/g;
+                const coderegex = /\`(.*?)\`/g;
+                const spoilregex = /\|\|(.*?)\|\|/gs;
                 
                 const heading1 = textbox.value.replace(heading1regex, '<h1>$2</h1>');
                 const bold = heading1.replace(boldregex, '<b>$1</b>');
                 const italic = bold.replace(italicregex, '<i>$1</i>');
-                const br = italic.replace(brregex, '<br>');
+                const bolditalic = italic.replace(bolditalicregex, '<b><i>$1</i></b>');
+                const br = bolditalic.replace(brregex, '<br>');
+                const code = br.replace(coderegex, '<pre>$1</pre>');
+                const spoil = code.replace(spoilregex, '<spoil>$1</spoil>');
 
-                const html = br;
+
+                const html = spoil;
 
                 textout.innerHTML = html;
                 console.log(html);
@@ -127,6 +137,7 @@
                 const editbridge = document.getElementById('edit-bridge');
 
                 editbridge.checked = editon;
+                markdown();
                 console.log(editon);
             }
 
@@ -134,13 +145,22 @@
                 document.getElementById(elementIdIn).style.setProperty('display', 'none');
             }
 
-            checkCookie()
-            markdown()
+            function accept_cookie(){
+                setCookie("cookie_accept",0,1);
+                hide('cookie');
+            }
+
+            checkCookie();
+            markdown();
         </script>
         <footer>
             <div class="warning" id="cookie">
                 WARNING: THIS WEBSITE USES COOKIES TO SAVE YOUR NOTES (this is the biggest lie rn)
-                <input type="button" id="cookies" value="nom..." onclick="hide('cookie')">
+                <input type="button" id="cookies" value="nom..." onclick="accept_cookie()">
+            </div>
+
+            <div class="warning" id="wip">
+                This site is currently in development!
             </div>
         </footer>
     </body>
