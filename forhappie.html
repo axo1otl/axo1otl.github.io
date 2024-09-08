@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Swap Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 30px;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Character Swap Tool</h2>
+<form id="swapForm">
+    <label for="paragraph">Paragraph:</label><br>
+    <textarea id="paragraph" required></textarea><br>
+
+    <label>Swap Characters:</label><br>
+    <input type="text" id="char1" maxlength="1" required> ↔ <input type="text" id="swap1" maxlength="1" required><br>
+    <input type="text" id="char2" maxlength="1" required> ↔ <input type="text" id="swap2" maxlength="1" required><br>
+    <input type="text" id="char3" maxlength="1" required> ↔ <input type="text" id="swap3" maxlength="1" required><br>
+    <input type="text" id="char4" maxlength="1" required> ↔ <input type="text" id="swap4" maxlength="1" required><br><br>
+
+    <button type="submit">Swap Characters</button>
+</form>
+
+<div id="result" class="result" style="display:none;">
+    <h3>Modified Paragraph:</h3>
+    <p id="modifiedParagraph"></p>
+</div>
+
+<script>
+    document.getElementById('swapForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let paragraph = document.getElementById('paragraph').value;
+        let char1 = document.getElementById('char1').value;
+        let swap1 = document.getElementById('swap1').value;
+        let char2 = document.getElementById('char2').value;
+        let swap2 = document.getElementById('swap2').value;
+        let char3 = document.getElementById('char3').value;
+        let swap3 = document.getElementById('swap3').value;
+        let char4 = document.getElementById('char4').value;
+        let swap4 = document.getElementById('swap4').value;
+
+        let modifiedParagraph = paragraph
+            .split(char1).join(swap1)
+            .split(char2).join(swap2)
+            .split(char3).join(swap3)
+            .split(char4).join(swap4);
+
+        document.getElementById('modifiedParagraph').textContent = modifiedParagraph;
+        document.getElementById('result').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
