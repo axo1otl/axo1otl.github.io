@@ -67,6 +67,13 @@
             var img = document.getElementById('img');
             var textbox = document.getElementById('textbox');
             var textout = document.getElementById('textout');
+
+            HtmlSanitizer.AllowedTags['BR'] = true;
+            HtmlSanitizer.AllowedTags['B'] = true;
+            HtmlSanitizer.AllowedTags['I'] = true;
+            HtmlSanitizer.AllowedTags['SPOIL'] = true;
+            HtmlSanitizer.AllowedTags['PRE'] = true;
+            HtmlSanitizer.AllowedTags['H1'] = true;
             
             console.log(img.value);
 
