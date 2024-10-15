@@ -74,6 +74,8 @@
             HtmlSanitizer.AllowedTags['SPOIL'] = true;
             HtmlSanitizer.AllowedTags['PRE'] = true;
             HtmlSanitizer.AllowedTags['H1'] = true;
+            HtmlSanitizer.AllowedTags['H2'] = true;
+            HtmlSanitizer.AllowedTags['H3'] = true;
             
             console.log(img.value);
 
@@ -118,6 +120,8 @@
 
             function markdown(){
                 const heading1regex = /^(#\s)(.*)$/gm;
+                //const heading2regex = /^(#\s)(.*)$/gm;
+                //const heading3regex = /^(#\s)(.*)$/gm;
                 const boldregex = /\*\*(.*?)\*\*/g;
                 const italicregex = /\*(.*?)\*/g;
                 const bolditalicregex = /\*\*\*(.*?)\*\*\*/g;
@@ -126,6 +130,8 @@
                 const spoilregex = /\|\|(.*?)\|\|/gs;
                 
                 const heading1 = textbox.value.replace(heading1regex, '<h1>$2</h1>');
+                //const heading2 = heading1.value.replace(heading2regex, '<h2>$2</h2>');
+                //const heading3 = heading2.value.replace(heading3regex, '<h3>$2</h3>');
                 const bold = heading1.replace(boldregex, '<b>$1</b>');
                 const italic = bold.replace(italicregex, '<i>$1</i>');
                 const bolditalic = italic.replace(bolditalicregex, '<b><i>$1</i></b>');
