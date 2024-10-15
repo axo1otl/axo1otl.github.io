@@ -74,10 +74,6 @@ body{
     background-color: #2f3539;
 }
 
-
-
-
-
 .grid{
     background-color: #1b1f21;
 
@@ -86,7 +82,7 @@ body{
     
     grid-template-columns: 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5%;
     padding-bottom: 1%;
-    filter: blur(3px) brightness(0.8);
+    filter: blur(0px) brightness(0.8);
     transition: all 2s;
 }
 .grid:hover{
@@ -111,13 +107,18 @@ body{
     font-family: 'Consolas', monaco, monospace;
 
     /* FILTER / EFFECTS */
-    filter: blur(3px) brightness(0.8);
+    filter: blur(0px) brightness(0.8);
     
     transition: all 2s;
 }
 .focus:hover{
     /*border: 5px solid #ffb133;*/
     filter: blur(0px) brightness(1.2);
+    transition: all 0.5s;
+}
+.focus:not(:hover){
+    /*border: 5px solid #ffb133;*/
+    filter: blur(3px) brightness(1.2);
     transition: all 0.5s;
 }
 
