@@ -1,0 +1,156 @@
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+<html>
+    <head>
+        <title>Terminal</title>
+    </head>
+    <body>
+        <div id="output">
+            Version 2.3.11 <br><br><br>
+            Welcome to 'me' <br><br>
+            This is an interactive story told through my inner monolouge. <br><br>
+            You will navigate through the story using words surrounded by ' '. <br><br>
+            These words are case sensitive so use lowercase only. <br><br>
+            Try it now with 'me' to start the story.
+        </div>
+        <input id="input" type="text" autofocus />
+        <script>
+            var helpId = 1
+            var event = 0
+            var health = 3
+            var keys = 0
+            var FyRE = '<span style="color: ffaa00;">F</span><span style="color: ffffff;">y</span><span style="color: ffaa00;">RE</span>';
+            const output = document.getElementById("output");
+            const input = document.getElementById("input");
+            input.addEventListener("keydown", handleInput);
+
+            function delay(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+            
+            function handleInput(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const inputText = input.value;
+                    appendOutput("> " + inputText);
+                    input.value = "";
+                    processInput(inputText);
+                }
+            }
+
+            function appendOutput(text) {
+                var output = document.getElementById('output');
+                var p = document.createElement("p");
+                p.className = 'default-text';
+                p.innerHTML = text;
+                output.appendChild(p);
+                output.scrollTop = output.scrollHeight;
+            }
+
+            function style(input) {
+                // Regular expression pattern to match "(hexcode): (text)" format
+                var pattern = /^#([0-9A-Fa-f]{6})\s*:\s*(.+)$/;
+            
+                // Replace matches with HTML span elements with appropriate styles
+                var styledInput = input.replace(pattern, function(match, hexcode, text) {
+                    return '<span style="color: ' + hexcode + ';">> ' + text + '</span>';
+                });
+            
+                return styledInput;
+            }
+
+
+            function processInput(inputText) {
+                // Process input text based on game state and trigger events accordingly
+                // You can use if statements, switch cases, or other logic to handle different inputs
+                // For this example, we'll simulate different responses based on predefined dialogues and events
+                const event0 = {
+
+                    "me": "#00ffaa: (05:45am) *The alarm clock rings*" + "<br>- 'get up'",
+                    "get up": "#aaaaaa: (05:46am) You got barely any sleep last night. Just 'hit snooze'.",
+                    "hit snooze": "#aaaaaa: (05:55am) The alarm clock is ringing, it hurts your ears. Get up and 'stay up'.",
+                    "stay up": "#aaaaaa: (06:02am) You didn't 'do your laundry' AGAIN.",
+                    "do your laundry": "#aaaaaa: (06:03am) It's way too late to do your laundry now. Just 'throw something on'.",
+                    
+                    "throw something on": "#aaaaaa: (06:05am) At least you have a different hoodie from yesterday... Head downstairs, dad is probably wondering where you are." + "<br>- 'go downstairs' | 'wait'",
+                        // SPLIT 1
+                        // no medicine access root (path 1)
+                        "go downstairs": "#aaaaaa: (06:07am) Yogi is meowing at you..." + "<br>- 'pet him' | 'meow back'",
+                            // SPLIT 2
+                            // caffinated (path 1.1 -> path 2)
+                            "pet him": "#aaaaaa: (06:07am) Give him head scratches and 'move on', you don't want to be late.",
+                            "move on": "#aaaaaa: (06:08am) You forgot your wallet." + "<br>- 'head back up'",
+                            // (this root stems off from path 1.1 into path 2)
+
+                            // uncaffinated access root (path 1.2)
+                            "meow back": "#00ffaa: (06:08am) *Yogi lies down and rolls onto your feet, you can feel him purring*" + "<br>- 'rub his tummy'",
+                            "rub his tummy": "#00ffaa: (06:09am) *You reach down and rub Yogi's tummy, he rolls over on his side and off your feet*" + "<br>- step over him",
+                            "step over him": "#aaaaaa: (06:10am | Bus: 11min) Make a cup of coffee and say good morning to dad. Also make sure you have everything, by the way did you grab your wallet?" + "<br>- 'make coffee' | 'check pockets'" + "<br> _____(5 min)____|_____(2 min)____",
+                                // SPLIT 3
+                                
+                                // medicine root (path 1.2 -> path 2)
+                                "check pockets": "#00ffaa: (06:10am | Bus: 11min) *You pat your pockets, your wallet isn't there." + "<br> *You run upstairs, grab your wallet, and knock over your bottle of medicine. You grab a pill." + "<br>- 'head back down'",
+                                // (this root stems off from path 1.2 into path 2)
+
+                                // uncaffinated root (1.2.1)
+                                "make coffee": "#00ffaa: (06:11am | Bus: 10min) *The coffee pot is full. As you pour your coffee, your dad says good morning. You manage to mumble a tired good morning and smile.*" + "<br>- 'sit down'",
+                                "sit down": "#aaaaaa: (06:17am | Bus: 4 min) Lets go to the couch. Is today gonna be an A day or B day? This mug is hot. Where are the dogs? What's going on in social media? How am I going to survive in college?" + "<br>- 'stop thinking'",
+                                "stop thinking": "#00ffaa: (--:--am | Bus: 3 min) *you take a deep breath and calm down. Your hand is shaking a bit so you grab your mug to hide it.*" + "<br>- 'leave'",
+                                "leave": "#00ffaa: (06:21am | Bus: <1 min) *You say goodbye to dad and head out to the drive way. The bus rolls in front of you.*" + "<br>- 'get in bus'",
+                                "get in bus": "#00ffaa: (06:23am) *You walk onto the bus. Everything is okay.*",
+
+                        // medicine root (path 2)
+                        "wait": "#00ffaa: (06:06am) *You wait a few seconds before realizing that you don't have your medicine.*" + "<br>- 'take medicine'",
+                        "take medicine": "#00ffaa: (06:08am) *You search for the bottle on your desk. Finding it, you pull out a single white and teal pill.*" + "<br>- 'head down'",
+                        "head down": "#aaaaaa: (06:09am) You forgot your wallet, 'head back up' and grab it.",
+                        "head back up": "#00ffaa: (06:11am | Bus: 10min) *You rush upstairs and grab your wallet." + "<br>- 'head back down'",
+                        "head back down": "#aaaaaa: (06:12am | Bus: 9 min) Make a cup of coffee and say good morning to dad." + "<br>- 'say good morning'",
+                        "say good morning": "#00ffaa: (06:13am | Bus: 8 min) *The coffee pot is full. As you pour your coffee, your dad says good morning. You manage to mumble a tired good morning and smile.*" + "<br>- 'take meds'",
+                        "take meds": "#aaaaaa: (06:13am | Bus: 8 min) Oh the coffee is really hot. Maybe wait for it to cool down before you drink the rest." + "<br>- 'go to couch'",
+                        "go to couch": "#bbaaaa: (06:14am | Bus: 7 min) Where are the dogs? What's going on in social media? How am I going to survive in college? Is computer science really worth it? What if you don't get a job? What if your roommate is a bad person?" + "<br>- 'panic'",
+                        "panic": "#ccaaaa: (--:--am | Bus: ? min) You haven't said anything to dad in a while. Your room is a mess, he's gonna get mad if you don't clean it. What if he goes through your stuff? Are you okay? Stop shaking so much. What is going on?" + "<br>- 'overthink'",
+                        "overthink": "#cc8888: (--:_-aw / Bns; ?????) Calm down. It's gonna be okay. You are fine. Stop worrying, take a deep breath. Slow down. Stop thinking so much. Calm down. It's gonna be okay. You are fine. Stop worrying, take a deep breath. Slow down. Stop thinking so much. Calm down. It's gonna be okay. You are fine. Stop worrying, take a deep breath. Slow down. Stop thinking so much." + "<br>- 'think more'",
+                        "think more": "#cc4444: (14:aaam | ::::::m_n) ...",
+                        "get on bus": "#00ffaa: (06:23am) *You walk onto the bus. Everything is okay.*",
+                    
+                    };
+
+                const response = event0[inputText] || "#FF0000: Command Unrecognized. Try 'me'.";
+                
+                if (inputText == "wait"){
+                    delay(5000).then(() => appendOutput(style(response)));
+                }
+                else if (inputText == "get on bus"){
+                    delay(5000).then(() => appendOutput(style("#FF0000: Command Unrecognized. Try 'me'.")));
+                    delay(7000).then(() => appendOutput(style("#FF0000: Command Unrecognized. Try 'me'.")));
+                    
+                    for(i = 0; i < 20; i++){
+                        delay(8000 + (i*50)).then(() => appendOutput(style("#FF0000: Command Unrecognized. Try 'me'.")));
+                    }
+                    for(i = 0; i < 31; i++){
+                        delay(9500 + (i*10)).then(() => appendOutput(style("#ff0000: Command Unrecognized. Try 'me'. Command Unrecognized. Try 'me'. Command Unrecognized. Try 'me'. Command Unrecognized. Try 'me'.")));
+                    }
+                    for(i = 0; i < 30; i++){
+                        delay(9600 + (i*26)).then(() => appendOutput(style("#000000: ...")));
+                    }
+                    for(i = 0; i < 20; i++){
+                        delay(10000 + (i*25)).then(() => appendOutput(style("#000000: ...")));
+                    }
+                    
+                    delay(13000).then(() => appendOutput(style(response)));
+
+                }
+                else if (inputText == "think more"){
+                    appendOutput(style(response))
+                    delay(2000).then(() => appendOutput(style("#ff4444: - 'get on bus'")))
+                }
+                else{
+                    appendOutput(style(response));
+                }
+                
+            }
+
+            
+        </script>
+    </body>
+</html>

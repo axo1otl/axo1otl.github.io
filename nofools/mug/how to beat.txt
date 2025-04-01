@@ -1,0 +1,11 @@
+Step 1: click on the 
+
+pattern  -> crc32 hex | decimal    | # | found at
+\_\/     -> 7aa0298a  | 2057316746 | 6 | news
+-_//_\-/ -> 1a949110  | 445944080  | 2 | 
+//\-\__/ -> 4e55608a  | 1314218122 | 4 |
+\_/--//\ -> 6c15af64  | 1813360484 | 5 |
+/\\-/_-- -> 1958df16  | 425254678  | 1 |
+\/_//\-\ -> 3f175dee  | 1058495982 | 3 | motivation
+
+redundent passwords for the 4e55608a step
