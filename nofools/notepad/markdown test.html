@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        #preview {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Markdown Previewer</h1>
+
+    <textarea id="markdown-input" placeholder="Enter Markdown here..."></textarea>
+
+    <h2>Preview:</h2>
+    <div id="preview"></div>
+
+    <!-- Marked.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        const textarea = document.getElementById('markdown-input');
+        const preview = document.getElementById('preview');
+
+        // Function to update the preview based on the markdown input
+        textarea.addEventListener('input', () => {
+            const markdownText = textarea.value;
+            // Convert markdown to HTML using Marked.js
+            const htmlContent = marked(markdownText);
+            preview.innerHTML = htmlContent;
+        });
+    </script>
+    
+</body>
+</html>

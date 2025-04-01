@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRC-32 Hash Calculator</title>
+	<script>
+		function updateHash() {
+			// Get the input value
+			var input = document.getElementById("input").value;
+
+			// Calculate the CRC-32 hash
+			var hash = crc32(input);
+
+			// Convert the hash to binary format
+			var bin = hash.toString(2);
+
+			// Get the characters to replace the 1's, 0's and 2's
+			var char0 = document.getElementById("char0").value;
+			var char1 = document.getElementById("char1").value;
+			var char2 = document.getElementById("char2").value;
+
+			// Replace the 1's and 0's with the specified characters
+			var result = "";
+			for (var i = 0; i < bin.length; i++) {
+				if (bin[i] === "0") {
+					result += char0;
+				} else if (bin[i] === "1") {
+					result += char1;
+                } else {
+					result += char2;
+				}
+			}
+
+			// Append extra 2's until the result has length of 32
+            
+            while (result.length < 32) {
+				result += char2;
+			}
+            
+
+			// Update the display
+			document.getElementById("hash").innerHTML = result;
+		}
+
+		function crc32(input) {
+			var crcTable = makeCrcTable();
+			var crc = 0xffffffff;
+			for (var i = 0; i < input.length; i++) {
+				var byte = input.charCodeAt(i) & 0xff;
+				crc = (crc >>> 8) ^ crcTable[(crc ^ byte) & 0xff];
+			}
+			return crc ^ 0xffffffff;
+		}
+
+		function makeCrcTable() {
+			var crcTable = [];
+			var poly = 0xedb88320;
+			for (var i = 0; i < 256; i++) {
+				var crc = i;
+				for (var j = 0; j < 8; j++) {
+					if (crc & 1) {
+						crc = (crc >>> 1) ^ poly;
+					} else {
+						crc >>>= 1;
+					}
+				}
+				crcTable[i] = crc;
+			}
+			return crcTable;
+		}
+	</script>
+</head>
+<body>
+	<h1>CRC-32 Hash Calculator</h1>
+	<label for="input">Input:</label>
+	<input type="text" id="input" oninput="updateHash()" value="">
+
+	<label for="char0">0 Character:</label>
+	<input type="text" id="char0" oninput="updateHash()" value="0">
+
+	<label for="char1">1 Character:</label>
+	<input type="text" id="char1" oninput="updateHash()" value="1">
+
+	<label for="char2">2 Character:</label>
+	<input type="text" id="char2" oninput="updateHash()" value="2">
+
+	<h2>Hash:</h2>
+	<pre><span id="hash"></span></pre>
+</body>
+</html>

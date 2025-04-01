@@ -1,0 +1,307 @@
+:root{
+    --rval: 0;
+    --gval: 0;
+    --bval: 0;
+
+    --uiscale: 2;
+
+    --toolopen: 0;
+
+    --thumbcolor: #fff;
+    --thumbsize: calc(25px * var(--uiscale));
+    --thumbtranstime: 0.25s ease;
+
+    --slidercolor: #202028;
+
+    --savec1: rgba(0,0,0,0);
+    --savec2: rgba(0,0,0,0);
+    --savec3: rgba(0,0,0,0);
+    --savec4: rgba(0,0,0,0);
+    --savec5: rgba(0,0,0,0);
+
+    --bgcolor: rgb(var(--rval),var(--gval),var(--bval));
+}
+
+html{
+    background-color: var(--bgcolor);
+    overflow-y: hidden;
+}
+
+.toolui {
+    position: absolute;
+    bottom: -350px;
+    left: 0;
+
+    max-width: 100vw;
+    width: 100%;
+
+    padding-top: calc(var(--uiscale) * 16px);
+    padding-bottom: calc(var(--uiscale) * 16px);
+
+    box-shadow: inset 0px 132px 0px 0px var(--bgcolor);
+
+    background-color: #101014;
+
+    transition: bottom 0.5s ease;
+}
+
+.toolui:hover {
+    bottom: 0;
+    box-shadow: inset 0px 132px 0px 0px var(--bgcolor);
+    transition: bottom 0.5s ease;
+}
+
+.texthint{
+    text-align: center;
+    font-size: 36px;
+}
+
+.slidecontainer {
+    width: 90%;
+    margin: 40px;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    
+    outline: none;
+    
+    translate: calc(48vw - calc(690px / 2));
+
+    margin: calc(var(--uiscale) * 2px);
+
+    width: calc(var(--uiscale) * calc(255px + var(--thumbsize) + var(--thumbsize) - 10px));
+    height: var(--thumbsize); 
+    
+    background: var(--slidercolor); 
+
+    border-radius: 100px;
+    
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 10px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 11px) #fff2;
+
+    -webkit-transition: 0.25s ease; 
+    transition:  0.25s ease;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    box-shadow: inset 0px 0px 0px calc(var(--uiscale) * 3px) var(--slidercolor), inset 0px 0px 0px calc(var(--uiscale) * 4px) #fff2;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+#red{
+    background: linear-gradient(to right , rgb(0,var(--gval),var(--bval)) , rgb(255,var(--gval),var(--bval)));
+}
+
+#green{
+    background: linear-gradient(to right , rgb(var(--rval),0,var(--bval)) , rgb(var(--rval),255,var(--bval))); 
+}
+
+#blue{
+    background: linear-gradient(to right , rgb(var(--rval),var(--gval),0) , rgb(var(--rval),var(--gval),255)); 
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slider::-moz-range-thumb {
+    width: var(--thumbsize);  
+    height: var(--thumbsize); 
+
+    background: var(--slidercolor);
+
+    border-radius: 50%;
+
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 3px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 6px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 10px) var(--slidercolor);
+    
+    cursor: pointer;
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-moz-range-thumb {
+    background: #0000;
+    
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 2px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 3px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 6px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-moz-range-thumb:active {
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 4px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-moz-range-thumb:hover {   
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 4px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    
+    width: var(--thumbsize);  
+    height: var(--thumbsize); 
+
+    background: var(--slidercolor);
+
+    border-radius: 50%;
+
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 3px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 6px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 10px) var(--slidercolor);
+    
+    cursor: pointer;
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-webkit-slider-thumb {
+    background: #0000;
+    
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 2px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 3px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 6px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-webkit-slider-thumb:active {
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 4px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+.slider:hover.slider::-webkit-slider-thumb:hover {   
+    box-shadow:
+    inset 0px 0px 0px calc(var(--uiscale) * 4px) var(--slidercolor),
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) #fff,
+    inset 0px 0px 0px calc(var(--uiscale) * 5px) var(--slidercolor);
+
+    -webkit-transition: var(--thumbtranstime); 
+    transition:  var(--thumbtranstime);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.savecontainer{
+    translate: calc(50vw - calc(306px / 2));
+
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
+
+    width: fit-content;
+
+    -webkit-transition: 0.25s ease; 
+    transition:  0.25s ease;
+}
+
+.savetile{
+    border: none;
+
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
+
+    width: calc(var(--uiscale) * 25px);
+    height: calc(var(--uiscale) * 25px); 
+    
+    background: var(--slidercolor); 
+
+    border-radius: 20% 20% 0% 0%;
+
+    cursor: pointer;
+
+    box-shadow: 0px 0px 0px calc(var(--uiscale) * 1px) var(--slidercolor);
+
+    -webkit-transition: 0.25s ease; 
+    transition:  0.25s ease;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+#savet1{
+    background: var(--savec1); 
+}
+
+#savet2{
+    background: var(--savec2); 
+}
+
+#savet3{
+    background: var(--savec3); 
+}
+
+#savet4{
+    background: var(--savec4); 
+}
+
+#savet5{
+    background: var(--savec5); 
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+.settile{
+    border: none;
+    
+    margin-left: calc(var(--uiscale) * 2px);
+    margin-right: calc(var(--uiscale) * 2px);
+    
+    width: calc(var(--uiscale) * 25px);
+    height: calc(var(--uiscale) * 12.5px); 
+    
+    background: var(--slidercolor); 
+    
+    border-radius: 0% 0% calc(var(--uiscale) * 5px) calc(var(--uiscale) * 5px);
+    
+    cursor: pointer;
+    
+    box-shadow: 0px 0px 0px calc(var(--uiscale) * 1px) var(--slidercolor);
+    
+    -webkit-transition: 0.25s ease; 
+    transition:  0.25s ease;
+}
+
+.setlable{
+    text-align: center;
+    font-size: calc(var(--uiscale) * 16px);
+
+    color: #fff1;
+
+    translate: 0px calc(var(--uiscale) * -3px);
+}
