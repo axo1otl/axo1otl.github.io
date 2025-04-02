@@ -1,0 +1,271 @@
+/*
+font-family: 'Syne Mono', monospace;
+font-family: 'VT323', monospace;
+*/
+
+html{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: 'Consolas', monospace;
+    background-color: #000;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+.hover {
+    background-color: #0008;
+    backdrop-filter: blur(5px);
+    
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0px 0px 10px #fff;
+    color: #fff;
+    
+    width: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+
+    display: grid;
+    position: fixed;
+    place-items: center;
+}
+.arg_1{
+    display: block;
+}
+
+@media (hover: none) {
+    .hover {
+        display: none;
+    }
+    .arg_1st{
+        display: block;
+    }
+}
+
+.hover{
+    display:none;
+}
+#arg_bg{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    /*filter: brightness(1.2) contrast(0.9);*/
+}
+#arg_bg_dark{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /*z-index: -100;*/
+    filter: brightness(0.5) blur(7px);
+}
+
+.arg_1{
+    color: #ffffff05;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff05;
+    
+    padding-top: 35%;
+
+    width: 100%;
+    max-height: 95vh;
+    transition: all 6000s ease;
+}
+.arg_1:hover{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+
+    padding-top: 35%;
+
+    width: 100%;
+    max-height: 95vh;
+    transition: all 10s ease;
+}
+.argtext{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 1rem;
+
+    place-items: center;
+
+    width: 100%;
+    max-height: 95vh;
+    transition: all 10s ease;
+}
+.arg_2{
+    color: #ffffff05;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff05;
+
+    width: 100%;
+    transition: all 6000s ease;
+}
+.arg_2:hover{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+
+    width: 100%;
+    transition: all 30s ease;
+}
+.arg_3{
+    color: #ffffff05;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff05;
+
+    width: 100%;
+    transition: all 6000s ease;
+}
+.arg_3:hover{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+
+    width: 100%;
+    transition: all 30s ease;
+}
+.arg_4{
+    color: #ffffff05;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ffffff05;
+    text-decoration: none;
+
+    width: 100%;
+    transition: all 6000s ease;
+}
+.arg_4:hover{
+    color: #ffff;
+    text-shadow: 0px 0px 10px #ffff;
+    font-size: 32px;
+    text-align: center;
+
+    width: 100%;
+    transition: all 30s ease;
+}
+
+.passwords{
+    display: flex;
+    mix-blend-mode:screen;
+    width: auto;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+.passwords .input{
+    font-family: 'Consolas', monospace;
+    mix-blend-mode:screen;
+    color: #fff;
+    font-size: 72;
+    text-shadow: 0px 0px 15px #eff;
+    background-color: #fff0;
+    height: 72px;
+    position: absolute;
+    top: calc(50% - 46px);
+}
+.passwords input{
+    font-family: 'Consolas', monospace;
+    mix-blend-mode:screen;
+    color: #fff;
+    font-size: 72;
+    text-shadow: 0px 0px 15px #eff;
+    background-color: #fff0;
+    transition: 0.1s;
+}
+.passwords .inBox{
+    filter: blur(3px);
+    background-color: #ffffff03;
+    text-align: center;
+    color: #fff2;
+    text-shadow: 0px 0px 5px #eff3;
+    border-color: #fff8;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px #eff4;
+    transition: 0.5s;
+    
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+.passwords .inBox:hover{
+    filter: blur(2px);
+    text-align: center;
+    color: #fff6;
+    text-shadow: 0px 0px 10px #eff5;
+    border-color: #fff8;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px #eff6;
+    transition: 0.5s;
+    
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+.passwords .inBox:focus{
+    filter: blur(2px);
+    text-align: center;
+    color: #fffa;
+    text-shadow: 0px 0px 15px #effa;
+    border-color: #fff8;
+    border-width: 0px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 20px #eff6;
+    transition: 1s;
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.passwords .hidden{
+    visibility: hidden;
+}
+
+.arg_hints{
+    color: #fff0;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff5;
+
+    width: 100%;
+    transition: all 1s ease;
+}
+.arg_hints:hover{
+    color: #fff8;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0px 0px 10px #fff5;
+
+    width: 100%;
+    height: fit-content;
+    transition: all 60s ease;
+}
+.arg_hints::selection{
+    background-color: #0000;
+}
+
+.button{
+    text-align: center;
+    border-color: #fff8;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 20px #fff5;
+    transition: 0.1s;
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
