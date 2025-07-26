@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Church-Encoded Lambda String Adder</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .terminal {
+      background: #111;
+      padding: 2rem;
+      border: 2px solid #33ff33;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      width: 100%;
+      background: #000;
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background: #33ff33;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #55ff55;
+    }
+
+    .result {
+      margin-top: 1rem;
+      font-family: monospace;
+      background: #000;
+      padding: 1rem;
+      white-space: pre-wrap;
+      border-top: 1px solid #33ff33;
+    }
+
+    .cursor::after {
+      content: "_";
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <h1 class="cursor">λ Church String Adder</h1>
+    <input type="text" id="str1" placeholder="Enter first string" />
+    <input type="text" id="str2" placeholder="Enter second string" />
+    <button onclick="generateChurchLambda()">Generate Lambda Function</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    // Church numeral generator for character codes
+    function churchNumeral(n) {
+      return `(λf.λx.${'f('.repeat(n)}x${')'.repeat(n)})`;
+    }
+
+    // Church-encode a string as a list of Church numerals
+    function churchEncodeString(str) {
+      return "[" + Array.from(str)
+        .map(char => `(${churchNumeral(char.charCodeAt(0))})`)
+        .join(", ") + "]";
+    }
+
+    function generateChurchLambda() {
+      const s1 = document.getElementById('str1').value;
+      const s2 = document.getElementById('str2').value;
+
+      const lambda = `(λx.λy.concat x y)`;
+      const appliedResult = s1 + s2;
+
+      const church1 = churchEncodeString(s1);
+      const church2 = churchEncodeString(s2);
+      const churchConcat = churchEncodeString(appliedResult);
+
+      const output = `
+Function: ${lambda}
+
+Input 1: "${s1}" => ${church1}
+Input 2: "${s2}" => ${church2}
+
+Result: ${lambda} "${s1}" "${s2}" => "${appliedResult}"
+Church-Encoded Result: ${churchConcat}
+      `;
+
+      document.getElementById('result').innerText = output.trim();
+    }
+  </script>
+</body>
+</html>
