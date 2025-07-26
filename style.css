@@ -9,7 +9,7 @@ font-family: 'VT323', monospace;
     --mobile-margin: 5%;
 }
 
-@media screen and (max-width: 992px) {
+@media (hover: none), (max-width: 992px) {
     h1{
         background-color: #ffffff05;
         color: #fffa;
