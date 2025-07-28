@@ -6,71 +6,7 @@ font-family: 'VT323', monospace;
 :root{
     --window: 100vw;
     --master-margin: 30%;
-    --mobile-margin: 5%;
-}
-
-@media (min-width: 1024px) {
-    h1{
-        background-color: #ffffff05;
-        color: #fffa;
-
-        font-weight: 100;
-        font-size: 40px;
-        
-        padding: 10px;
-        margin: 0px;
-
-        margin-left: var(--master-margin);
-        margin-right: var(--master-margin);
-
-        width: auto;
-        min-width: fit-content;
-
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border: 1px solid #fff2;
-
-        backdrop-filter: blur(20px) brightness(1.3);
-
-        z-index: -1;
-    }
-    h3{
-        margin: 10px;
-
-        margin-left: var(--master-margin);
-        margin-right: var(--master-margin);
-
-        padding: 10px;
-        padding-top: 0px;
-        width: auto;
-        z-index: -1;
-
-        background-color: #fff0;
-        box-shadow: inset 0px 0px 100px #fff0;
-        border-radius: 5px;
-        border: 1px solid #fff0;
-
-        color: #fffa;
-        font-weight: bold;
-        font-size: 16;
-
-        backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
-        transition: all 0.5s ease;
-    }
-    h3:hover{
-        /*margin: 20px;*/
-        margin-left: calc(var(--master-margin) - 2%);
-        margin-right: calc(var(--master-margin) - 2%);
-        padding-left: calc(2% + 10px);
-        padding-right: calc(2% + 10px);
-        border: 1px solid #fff3;
-        box-shadow: inset 0px 0px 100px #fff1;
-        text-shadow: 0px 0px 10px;
-
-        backdrop-filter: blur(20px) brightness(1.4) saturate(130%);
-
-        transition: all 0.5s, box-shadow 2s, border 2s;
-    }
+    --mobile-margin: 0%;
 }
 
 html{
@@ -159,11 +95,6 @@ h3{
     transition: all 0.5s ease;
 }
 h3:hover{
-    /*margin: 20px;*/
-    margin-left: calc(var(--mobile-margin) - 2%);
-    margin-right: calc(var(--mobile-margin) - 2%);
-    padding-left: calc(2% + 10px);
-    padding-right: calc(2% + 10px);
     border: 1px solid #fff3;
     box-shadow: inset 0px 0px 100px #fff1;
     text-shadow: 0px 0px 10px;
@@ -197,6 +128,77 @@ h3:hover pre{
     border: solid 1px #fff4;
     box-shadow: inset 0px 0px 20px #fff2;
     transition: all 1s;
+}
+
+@media screen and (min-width: 808px) {
+    h1{
+        background-color: #ffffff05;
+        color: #fffa;
+
+        font-weight: 100;
+        font-size: 40px;
+        
+        padding: 10px;
+        margin: 0px;
+
+        /*
+        margin-left: var(--master-margin);
+        margin-right: var(--master-margin);
+        min-width: 1024px;
+        */
+
+        margin: auto;
+
+        width: 768;
+
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 1px solid #fff2;
+
+        backdrop-filter: blur(20px) brightness(1.3);
+
+        z-index: -1;
+    }
+    h3{
+
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        width: 768px;
+
+        padding: 10px;
+        padding-top: 0px;
+        z-index: -1;
+
+        background-color: #fff0;
+        box-shadow: inset 0px 0px 100px #fff0;
+        border-radius: 5px;
+        border: 1px solid #fff0;
+
+        color: #fffa;
+        font-weight: bold;
+        font-size: 16;
+
+        backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
+        transition: all 0.5s ease;
+    }
+    h3:hover{
+        /*margin: 20px;*/
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        padding-left: calc(10px + 2%);
+        padding-right: calc(10px + 2%);
+        border: 1px solid #fff3;
+        box-shadow: inset 0px 0px 100px #fff1;
+        text-shadow: 0px 0px 10px;
+
+        backdrop-filter: blur(20px) brightness(1.4) saturate(130%);
+
+        transition: all 0.5s, box-shadow 2s, border 2s;
+    }
 }
 
 #version {
