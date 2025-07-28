@@ -9,7 +9,7 @@ font-family: 'VT323', monospace;
     --mobile-margin: 5%;
 }
 
-@media (hover: none), (max-width: 992px) {
+@media (min-width: 1024px) {
     h1{
         background-color: #ffffff05;
         color: #fffa;
@@ -20,8 +20,8 @@ font-family: 'VT323', monospace;
         padding: 10px;
         margin: 0px;
 
-        margin-left: var(--mobile-margin);
-        margin-right: var(--mobile-margin);
+        margin-left: var(--master-margin);
+        margin-right: var(--master-margin);
 
         width: auto;
         min-width: fit-content;
@@ -37,8 +37,8 @@ font-family: 'VT323', monospace;
     h3{
         margin: 10px;
 
-        margin-left: var(--mobile-margin);
-        margin-right: var(--mobile-margin);
+        margin-left: var(--master-margin);
+        margin-right: var(--master-margin);
 
         padding: 10px;
         padding-top: 0px;
@@ -59,8 +59,8 @@ font-family: 'VT323', monospace;
     }
     h3:hover{
         /*margin: 20px;*/
-        margin-left: calc(var(--mobile-margin) - 2%);
-        margin-right: calc(var(--mobile-margin) - 2%);
+        margin-left: calc(var(--master-margin) - 2%);
+        margin-right: calc(var(--master-margin) - 2%);
         padding-left: calc(2% + 10px);
         padding-right: calc(2% + 10px);
         border: 1px solid #fff3;
@@ -84,6 +84,11 @@ html::-webkit-scrollbar{
     display: none;
 }
 
+*::selection{
+    background-color: #fff2;
+    text-shadow: 0px 0px 10px;
+}
+
 /* Titile bar start */
 h1{
     background-color: #ffffff05;
@@ -95,8 +100,8 @@ h1{
     padding: 10px;
     margin: 0px;
 
-    margin-left: var(--master-margin);
-    margin-right: var(--master-margin);
+    margin-left: var(--mobile-margin);
+    margin-right: var(--mobile-margin);
 
     width: auto;
     min-width: fit-content;
@@ -133,8 +138,8 @@ h1{
 h3{
     margin: 10px;
 
-    margin-left: var(--master-margin);
-    margin-right: var(--master-margin);
+    margin-left: var(--mobile-margin);
+    margin-right: var(--mobile-margin);
 
     padding: 10px;
     padding-top: 0px;
@@ -155,8 +160,8 @@ h3{
 }
 h3:hover{
     /*margin: 20px;*/
-    margin-left: calc(var(--master-margin) - 2%);
-    margin-right: calc(var(--master-margin) - 2%);
+    margin-left: calc(var(--mobile-margin) - 2%);
+    margin-right: calc(var(--mobile-margin) - 2%);
     padding-left: calc(2% + 10px);
     padding-right: calc(2% + 10px);
     border: 1px solid #fff3;
