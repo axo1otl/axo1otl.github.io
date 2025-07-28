@@ -12,7 +12,7 @@ font-family: 'VT323', monospace;
 html{
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-family: 'Consolas', monospace;
+    font-family: 'DM Mono', monospace;
     background-color: #000;
 }
 
@@ -34,6 +34,8 @@ h1{
     font-size: 40px;
     
     padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 15px;
     margin: 0px;
 
     margin-left: var(--mobile-margin);
@@ -52,13 +54,13 @@ h1{
 }
 .status_bar{
     font-size: 12px;
-    font-weight: 300;
     background: none;
 }
 .logo{
-    margin-top: -7px;
-    height: 50px;
-    width: 76px;
+    margin-top: -20px;
+    height: 60px;
+    width: auto;
+    filter: opacity(0.75);
 }
 
 #arg_bg_dark{
@@ -88,7 +90,7 @@ h3{
     border: 1px solid #fff0;
 
     color: #fffa;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16;
 
     backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
@@ -135,10 +137,11 @@ h3:hover pre{
         background-color: #ffffff05;
         color: #fffa;
 
-        font-weight: 100;
         font-size: 40px;
         
         padding: 10px;
+        padding-bottom: 5px;
+        padding-top: 15px;
         margin: 0px;
 
         /*
@@ -160,7 +163,6 @@ h3:hover pre{
         z-index: -1;
     }
     h3{
-
         margin: auto;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -177,7 +179,7 @@ h3:hover pre{
         border: 1px solid #fff0;
 
         color: #fffa;
-        font-weight: bold;
+        font-weight: 400;
         font-size: 16;
 
         backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
