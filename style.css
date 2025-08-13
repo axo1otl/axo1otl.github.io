@@ -81,6 +81,8 @@ h3{
     margin-right: var(--mobile-margin);
 
     padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 0px;
     width: auto;
     z-index: -1;
@@ -132,8 +134,33 @@ h3:hover pre{
     box-shadow: inset 0px 0px 20px #fff2;
     transition: all 1s;
 }
+
 .badges{
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: -12px;
+}
+.badges a{
+    color: #0000;
+}
+.badges img{
+    box-shadow: 0px 0px 20px #fff0;
+    border-radius: 2px;
+    margin-right: 7px;
+    margin-bottom: 12px;
+    transition: all 0.5s;
+}
+.badge-container:hover img{
+    filter: blur(1px) opacity(0.5);
+    transition: all 0.5s;
+}
+.badges img:hover{
+    filter: blur(0px) opacity(1);
+    transition: all 0.5s;
+}
+.badges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 808px) {
@@ -175,6 +202,8 @@ h3:hover pre{
         width: 768px;
 
         padding: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
         padding-top: 0px;
         z-index: -1;
 
@@ -196,8 +225,8 @@ h3:hover pre{
         margin-top: 10px;
         margin-bottom: 10px;
 
-        padding-left: calc(10px + 2%);
-        padding-right: calc(10px + 2%);
+        padding-left: calc(16px + 2%);
+        padding-right: calc(16px + 2%);
         border: 1px solid #fff3;
         box-shadow: inset 0px 0px 100px #fff1;
         text-shadow: 0px 0px 10px;
