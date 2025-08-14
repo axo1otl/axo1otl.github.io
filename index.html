@@ -45,21 +45,187 @@
         <h3 class="updates" dir="ltr">
             <div class="update_content">
                 <div class="ttd">
-                    <p class="title" style="font-size: 24px;">> SHOWCASE</p>
+                    <p class="title" style="font-size: 24px;">
+                        > SHOWCASE
+                        <div class="master-volume">
+                            volume
+                            <input id="masterVolume" type="range" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </p>
                 </div>
                 <div class="grid">
-                    <div class="item item-1"></div>
-                    <div class="item item-2"><iframe style="border: 0; width: 100%; height: 100%;" src="https://bandcamp.com/EmbeddedPlayer/album=3649794108/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=741392784/transparent=true/" seamless><a href="https://ax1tl.bandcamp.com/album/godrays">Godrays by ax1tl</a></iframe></div>
-                    <div class="item item-3"></div>
-                    <div class="item item-4"><iframe style="border: 0; width: 100%; height: 100%;" src="https://bandcamp.com/EmbeddedPlayer/track=2217247659/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://ax1tl.bandcamp.com/track/yourehere-live-version">you&#39;rehere (live version) by ax1tl</a></iframe></div>
-                    <div class="item item-5"></div>
-                    <div class="item item-6"></div>
-                    <div class="item item-7"></div>
-                    <div class="item item-8"></div>
-                    <div class="item item-9"></div>
-                </div>
-            </div>
+                    <div class="item item-1">
 
+                        <div class="audio-player">
+
+                            <p class="demo-title">flourish</p>
+                            
+                            <audio src="music/showcase/portfolio 1-flourish.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+
+                            <p class="demo-description">calm, explorative vgm</p>
+
+                        </div>
+
+                    </div>
+                    <div class="item item-2">
+
+                        <div class="audio-player">
+                            
+                            <p class="demo-title">shared space</p>
+
+                            <audio src="music/showcase/portfolio 2-shared space.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+
+                            <p class="demo-description">meloncholy nostalgia</p>
+
+                        </div>
+
+                    </div>
+                    <div class="item item-3">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 3-more fishing music.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item item-4">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 4-chilled (live ver).wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item item-5">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 5-L I M B O Full OST.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="item item-6">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 6-mist.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item item-7">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 7-boylston screech.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item item-8">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 8-burnout.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item item-9">
+
+                        <div class="audio-player">
+                            <audio src="music/showcase/portfolio 9-tape.wav"></audio>
+                            <button class="playPause">▶</button>
+                            <div class="controls">
+                                <input class="seekBar" type="range" value="0" min="0" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <script>
+                    // Store all audio elements for volume control
+                    const allAudios = [];
+                    const allPlayPause = [];
+
+                    const masterVolume = document.getElementById('masterVolume');
+                    masterVolume.addEventListener('input', () => {
+                        allAudios.forEach(audio => {
+                            audio.volume = masterVolume.value;
+                        });
+                    });
+
+                    function initializeAudioPlayer(container) {
+                        const audio = container.querySelector('audio');
+                        const playPause = container.querySelector('.playPause');
+                        const seekBar = container.querySelector('.seekBar');
+                        
+                        // Keep track of this audio for master volume
+                        allAudios.push(audio);
+                        allPlayPause.push(playPause);
+
+                        function togglePlayPause() {
+
+                            if (audio.paused) {
+                                allAudios.forEach(function(audioin){
+                                    audioin.pause();
+                                });
+                                allPlayPause.forEach(function(playPausein){
+                                    playPausein.textContent = '▶';
+                                });
+
+                                audio.volume = masterVolume.value;
+
+                                audio.play();
+                                playPause.textContent = '⏸';
+                            } else {
+                                audio.pause();
+                                playPause.textContent = '▶';
+                            }
+                        }
+                        
+                        function updateSeekBar() {
+                            seekBar.max = audio.duration;
+                            seekBar.value = audio.currentTime;
+                        }
+                        
+                        function seekAudio() {
+                            audio.currentTime = seekBar.value;
+                        }
+                        
+                        playPause.addEventListener('click', togglePlayPause);
+                        audio.addEventListener('timeupdate', updateSeekBar);
+                        seekBar.addEventListener('input', seekAudio);
+                    }
+                    
+                    // Initialize all players
+                    document.querySelectorAll('.audio-player').forEach(initializeAudioPlayer);
+                </script>
+            </div>
         </h3>
 
         <h3 class="updates" dir="ltr"> 
@@ -246,6 +412,6 @@
 
     </body>
     <div id="version">
-        version 5.0.11
+        version 5.0.12
     </div>
 </html>

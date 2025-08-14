@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiple Audio Players with Master Volume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 50px;
+    }
+
+    .audio-player {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 30px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .playPause {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: none;
+      background: #007BFF;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .playPause:hover {
+      background: #0056b3;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    input[type="range"] {
+      flex-grow: 1;
+    }
+
+    label {
+      white-space: nowrap;
+    }
+
+    .master-volume {
+      margin-top: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Master Volume -->
+<div class="master-volume">
+  <label for="masterVolume">Master Volume:</label>
+  <input id="masterVolume" type="range" min="0" max="1" step="0.01" value="1">
+</div>
+
+<!-- Audio Player 1 -->
+<div class="audio-player">
+  <audio src="your-audio-file-1.mp3"></audio>
+  <button class="playPause">▶</button>
+  <div class="controls">
+    <input class="seekBar" type="range" value="0" min="0" step="1">
+  </div>
+</div>
+
+<!-- Audio Player 2 -->
+<div class="audio-player">
+  <audio src="your-audio-file-2.mp3"></audio>
+  <button class="playPause">▶</button>
+  <div class="controls">
+    <input class="seekBar" type="range" value="0" min="0" step="1">
+  </div>
+</div>
+
+<script>
+  // Store all audio elements for volume control
+  const allAudios = [];
+
+  function initializeAudioPlayer(container) {
+    const audio = container.querySelector('audio');
+    const playPause = container.querySelector('.playPause');
+    const seekBar = container.querySelector('.seekBar');
+
+    // Keep track of this audio for master volume
+    allAudios.push(audio);
+
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+        playPause.textContent = '⏸';
+      } else {
+        audio.pause();
+        playPause.textContent = '▶';
+      }
+    }
+
+    function updateSeekBar() {
+      seekBar.max = audio.duration;
+      seekBar.value = audio.currentTime;
+    }
+
+    function seekAudio() {
+      audio.currentTime = seekBar.value;
+    }
+
+    playPause.addEventListener('click', togglePlayPause);
+    audio.addEventListener('timeupdate', updateSeekBar);
+    seekBar.addEventListener('input', seekAudio);
+  }
+
+  // Initialize all players
+  document.querySelectorAll('.audio-player').forEach(initializeAudioPlayer);
+
+  // Master volume control
+  const masterVolume = document.getElementById('masterVolume');
+  masterVolume.addEventListener('input', () => {
+    allAudios.forEach(audio => {
+      audio.volume = masterVolume.value;
+    });
+  });
+</script>
+
+</body>
+</html>

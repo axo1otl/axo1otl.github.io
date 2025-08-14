@@ -96,7 +96,7 @@ h3{
     font-weight: 400;
     font-size: 16;
 
-    backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
+    backdrop-filter: blur(15px) brightness(1.4) saturate(110%);
     transition: all 0.5s ease;
 }
 h3:hover{
@@ -104,7 +104,7 @@ h3:hover{
     box-shadow: inset 0px 0px 100px #fff1;
     text-shadow: 0px 0px 10px;
 
-    backdrop-filter: blur(20px) brightness(1.4) saturate(130%);
+    backdrop-filter: blur(15px) brightness(1.4) saturate(130%);
     
     transition: all 0.5s, box-shadow 2s, border 2s;
 }
@@ -161,6 +161,25 @@ h3:hover pre{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.audio-player {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.audio-player button{
+    border: 1px solid #fff4;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+.demo-description{
+    font-size: 1.5vw;
+    color: #fff4;
 }
 
 .grid {
@@ -258,7 +277,7 @@ h3:hover pre{
 
         border: 1px solid #fff3;
 
-        backdrop-filter: blur(20px) brightness(1.4) saturate(130%);
+        backdrop-filter: blur(15px) brightness(1.4) saturate(130%);
 
         z-index: -1;
     }
@@ -284,7 +303,7 @@ h3:hover pre{
         font-weight: 400;
         font-size: 16;
 
-        backdrop-filter: blur(20px) brightness(1.4) saturate(110%);
+        backdrop-filter: blur(15px) brightness(1.4) saturate(110%);
         transition: all 0.5s ease;
     }
     h3:hover{
@@ -299,9 +318,14 @@ h3:hover pre{
         box-shadow: inset 0px 0px 100px #fff1;
         text-shadow: 0px 0px 10px;
 
-        backdrop-filter: blur(20px) brightness(1.4) saturate(130%);
+        backdrop-filter: blur(15px) brightness(1.4) saturate(130%);
 
         transition: all 0.5s, box-shadow 2s, border 2s;
+    }
+
+    .demo-description{
+        font-size: 12px;
+        color: #fff4;
     }
 }
 
