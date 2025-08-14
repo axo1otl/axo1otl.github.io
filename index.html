@@ -61,7 +61,7 @@
                             <p class="demo-title">flourish</p>
                             
                             <audio src="music/showcase/portfolio 1-flourish.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
@@ -78,7 +78,7 @@
                             <p class="demo-title">shared space</p>
 
                             <audio src="music/showcase/portfolio 2-shared space.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
@@ -91,77 +91,119 @@
                     <div class="item item-3">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">more_fishing_music.wav</p>
+
                             <audio src="music/showcase/portfolio 3-more fishing music.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">hopeful, in the background</p>
+
                         </div>
 
                     </div>
                     <div class="item item-4">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">you'rehere</p>
+
                             <audio src="music/showcase/portfolio 4-chilled (live ver).wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">evolving yet simplistic</p>
+
                         </div>
 
                     </div>
                     <div class="item item-5">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">Room (LIMBO OST)</p>
+
                             <audio src="music/showcase/portfolio 5-L I M B O Full OST.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">experimental, horror</p>
+
                         </div>
                         
                     </div>
                     <div class="item item-6">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">THE OCEAN CRIES</p>
+
                             <audio src="music/showcase/portfolio 6-mist.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">atmospheric w/ vocals</p>
+
                         </div>
 
                     </div>
                     <div class="item item-7">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">The Boston "T"</p>
+
                             <audio src="music/showcase/portfolio 7-boylston screech.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">fast-paced and upbeat</p>
+
                         </div>
 
                     </div>
                     <div class="item item-8">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">burnout.</p>
+
                             <audio src="music/showcase/portfolio 8-burnout.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">chill vaporwave</p>
+
                         </div>
 
                     </div>
                     <div class="item item-9">
 
                         <div class="audio-player">
+
+                            <p class="demo-title">tape.wav</p>
+
                             <audio src="music/showcase/portfolio 9-tape.wav"></audio>
-                            <button class="playPause">▶</button>
+                            <button class="playPause">▷</button>
                             <div class="controls">
                                 <input class="seekBar" type="range" value="0" min="0" step="1">
                             </div>
+
+                            <p class="demo-description">tape-style groov w/ solo</p>
+
                         </div>
 
                     </div>
@@ -195,16 +237,16 @@
                                     audioin.pause();
                                 });
                                 allPlayPause.forEach(function(playPausein){
-                                    playPausein.textContent = '▶';
+                                    playPausein.textContent = '▷';
                                 });
 
                                 audio.volume = masterVolume.value;
 
                                 audio.play();
-                                playPause.textContent = '⏸';
+                                playPause.textContent = '❚❚';
                             } else {
                                 audio.pause();
-                                playPause.textContent = '▶';
+                                playPause.textContent = '▷';
                             }
                         }
                         
@@ -412,6 +454,6 @@
 
     </body>
     <div id="version">
-        version 5.0.12
+        version 5.0.14
     </div>
 </html>

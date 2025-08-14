@@ -171,12 +171,94 @@ h3:hover pre{
     align-items: center;
 }
 .audio-player button{
-    border: 1px solid #fff4;
+    border: 1px solid #fff0;
+    background-color: #fff1;
+    color: #fff5;
     border-radius: 100%;
     width: 50px;
     height: 50px;
     margin: 5px;
+    transition: all 0.5s, box-shadow 1s;
 }
+.audio-player button:hover{
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px #fff1, 0px 0px 10px #fff2;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    transition: all 0.5s, box-shadow 1s;
+}
+
+.seekBar{
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: 1px solid #fff0;
+    background-color: #fff1;
+    color: #fff5;
+    border-radius: 100px;
+    margin: 5px;
+    overflow: hidden;
+    transition: all 0.5s, box-shadow 1s;
+}
+.seekBar:hover{
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px #fff1, 0px 0px 10px #fff2;
+    transition: all 0.5s, box-shadow 1s;
+}
+
+.seekBar::-moz-range-thumb {
+    border: 1px solid #fff0;
+    background-color: #fff1;
+    box-shadow: inset 0 0 20px #fff0, 0 0 10px #fff0, -408px 0 5px 400px #fff1;
+    color: #fff5;
+    border-radius: 100px;
+    margin: 5px;
+    overflow: hidden;
+    transition: all 0.5s, box-shadow 1s;
+}
+.seekBar::-moz-range-thumb:hover {
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px #fff1, 0px 0px 10px #fff2, -408px 0 5px 400px #fff1;
+    transition: all 0.5s, box-shadow 1s;
+}
+.seekBar::-moz-range-thumb:active {
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px 10px #fff4, 0px 0px 10px #fff2, -408px 0 5px 400px #fff1;
+    transition: all 0.5s, box-shadow 1s;
+}
+
+.seekBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: 1px solid #fff0;
+    background-color: #fff1;
+    box-shadow: inset 0 0 20px #fff0, 0 0 10px #fff0, -408px 0 5px 400px #fff1;
+    color: #fff5;
+    border-radius: 100px;
+    margin: 5px;
+    overflow: hidden;
+    transition: all 0.5s, box-shadow 1s;
+}
+.seekBar::-webkit-slider-thumb:hover {
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px #fff1, 0px 0px 10px #fff2, -408px 0 5px 400px #fff1;
+    transition: all 0.5s, box-shadow 1s;
+}
+.seekBar::-webkit-slider-thumb:active {
+    border: 1px solid #fff4;
+    background-color: #fff1;
+    box-shadow: inset 0px 0px 20px 10px #fff4, 0px 0px 10px #fff2, -408px 0 5px 400px #fff1;
+    transition: all 0.5s, box-shadow 1s;
+}
+
 .demo-description{
     font-size: 1.5vw;
     color: #fff4;
